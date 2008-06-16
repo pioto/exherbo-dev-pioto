@@ -1,0 +1,33 @@
+# Copyright 2008 Michael Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+DESCRIPTION="Basic finger and fingerd from the netkit package."
+HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
+SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/bsd-finger-0.17.tar.gz"
+
+LICENSE="BSD"
+SLOT="0"
+PLATFORMS="~x86"
+MYOPTIONS=""
+
+DEPENDENCIES=""
+
+DEFAULT_SRC_PREPARE_PATCHES=("${FILESDIR}/${P}-include-time-fix.patch")
+
+src_configure() {
+    ./configure --prefix=/usr
+
+    sed -i "s,CFLAGS=\(.*\),CFLAGS=\1 ${CFLAGS}," MCONFIG \
+        || die "CFLAGS sed failed"
+    sed -i "s,LDFLAGS=\(.*\),LDFLAGS=\1 ${CFLAGS}," MCONFIG \
+        || die "LDFLAGS sed failed"
+    sed -i "s,MANDIR=\(.*\),MANDIR=/usr/share/man," MCONFIG \
+        || die "MANDIR sed failed"
+}
+
+src_install() {
+    sed -i "s,INSTALLROOT=\(.*\),INSTALLROOT=${D}," MCONFIG \
+        || die "INSTALLROOT sed failed"
+    dodir /usr/bin /usr/sbin /usr/share/man/man{1,8}
+    make install || die "make install failed"
+}
