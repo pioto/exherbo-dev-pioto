@@ -1,0 +1,16 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+# Based in part upon 'eselect-syntax-20070506.ebuild', which is:
+#     Copyright 1999-2007 Gentoo Foundation
+
+require vim-plugin
+
+DESCRIPTION="eselect syntax highlighting, filetype and indent settings"
+HOMEPAGE="http://www.gentoo.org/"
+SRC_URI="mirror://gentoo/${P}.tar.bz2"
+
+LICENSE="vim"
+SLOT="0"
+PLATFORMS="~x86"
+MYOPTIONS=""
+
