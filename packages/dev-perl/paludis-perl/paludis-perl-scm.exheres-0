@@ -3,7 +3,7 @@
 
 require perl-module git
 
-DESCRIPTION="Perl bindings for Paludis"
+SUMMARY="Perl bindings for Paludis"
 HOMEPAGE="http://www.pioto.org/"
 SRC_URI=""
 

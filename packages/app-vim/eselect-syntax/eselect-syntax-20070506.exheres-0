@@ -5,7 +5,7 @@
 
 require vim-plugin
 
-DESCRIPTION="eselect syntax highlighting, filetype and indent settings"
+SUMMARY="eselect syntax highlighting, filetype and indent settings"
 HOMEPAGE="http://www.gentoo.org/"
 SRC_URI="mirror://gentoo/${P}.tar.bz2"
 

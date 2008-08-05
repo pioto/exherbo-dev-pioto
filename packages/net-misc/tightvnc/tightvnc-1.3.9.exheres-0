@@ -1,14 +1,14 @@
 # Copyright 2008 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-DESCRIPTION=""
+SUMMARY=""
 HOMEPAGE=""
 SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
 PLATFORMS="~x86"
-MYOPTIONS=""
+MYOPTIONS="server"
 
 DEPENDENCIES="
     build:
@@ -18,17 +18,27 @@ DEPENDENCIES="
 
 S="${WORKDIR}/vnc_unixsrc"
 
-src_prepare() {
+src_configure() {
     xmkmf || die "xmkmf failed"
 }
 
 src_compile() {
-    make World || die "make World failed"
-    cp 
+    emake World || die "make World failed"
+    if optionq "server" ; then
+        cd Xvnc
+        ./configure || die "configure failed"
+        emake
+    fi
 }
 
 src_install() {
     dodir "/usr/bin" "/usr/share/man/man1"
     ./vncinstall "${D}/usr/bin" "${D}/usr/share/man" \
         || die "vncinstall failed"
+
+    if ! optionq "server" ; then
+        rm "${D}/usr/share/man/man1/"{vncserver,Xvnc}.1
+        rm "${D}/usr/bin/vncserver"
+    fi
 }
+

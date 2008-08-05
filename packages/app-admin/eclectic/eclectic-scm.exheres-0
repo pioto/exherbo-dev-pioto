@@ -3,7 +3,7 @@
 
 require subversion
 
-DESCRIPTION="Modular -config replacement utility -- a fork from eselect-1.1.x"
+SUMMARY="Modular -config replacement utility -- a fork from eselect-1.1.x"
 HOMEPAGE="http://www.exherbo.org/"
 SRC_URI=""
 

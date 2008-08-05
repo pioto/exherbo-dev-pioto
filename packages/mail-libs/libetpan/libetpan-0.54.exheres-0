@@ -1,7 +1,7 @@
 # Copyright 2008 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-DESCRIPTION="a portable, efficient framework for different kinds of mail access"
+SUMMARY="a portable, efficient framework for different kinds of mail access"
 HOMEPAGE="http://libetpan.sourceforge.net/libetpan/"
 SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
 
