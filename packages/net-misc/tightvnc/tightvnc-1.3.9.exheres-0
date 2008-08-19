@@ -3,9 +3,9 @@
 
 SUMMARY=""
 HOMEPAGE=""
-SRC_URI="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
+SOURCES="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
 
-LICENSE="GPL-2"
+LICENCES="GPL-2"
 SLOT="0"
 PLATFORMS="~x86"
 MYOPTIONS="server"

@@ -3,9 +3,9 @@
 
 SUMMARY="Basic finger and fingerd from the netkit package."
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
-SRC_URI="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
+SOURCES="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${P}.tar.gz"
 
-LICENSE="BSD"
+LICENCES="BSD"
 SLOT="0"
 PLATFORMS="~x86"
 MYOPTIONS=""

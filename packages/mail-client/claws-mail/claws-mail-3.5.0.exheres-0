@@ -3,9 +3,9 @@
 
 SUMMARY="an email client (and news reader), based on GTK+"
 HOMEPAGE="http://www.claws-mail.org/"
-SRC_URI="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
+SOURCES="mirror://sourceforge/sylpheed-claws/${P}.tar.bz2"
 
-LICENSE="GPL-3 BSD"
+LICENCES="GPL-3 BSD"
 SLOT="0"
 PLATFORMS="~x86"
 MYOPTIONS=""
