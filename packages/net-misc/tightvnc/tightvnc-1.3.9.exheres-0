@@ -3,7 +3,7 @@
 
 SUMMARY=""
 HOMEPAGE=""
-SOURCES="mirror://sourceforge/vnc-tight/${P}_unixsrc.tar.bz2"
+DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
 
 LICENCES="GPL-2"
 SLOT="0"
@@ -16,7 +16,7 @@ DEPENDENCIES="
         x11-utils/xorg-cf-files
         x11-utils/gccmakedep"
 
-S="${WORKDIR}/vnc_unixsrc"
+WORK="${WORKBASE}/vnc_unixsrc"
 
 src_configure() {
     xmkmf || die "xmkmf failed"
@@ -33,12 +33,12 @@ src_compile() {
 
 src_install() {
     dodir "/usr/bin" "/usr/share/man/man1"
-    ./vncinstall "${D}/usr/bin" "${D}/usr/share/man" \
+    ./vncinstall "${IMAGE}/usr/bin" "${IMAGE}/usr/share/man" \
         || die "vncinstall failed"
 
     if ! optionq "server" ; then
-        rm "${D}/usr/share/man/man1/"{vncserver,Xvnc}.1
-        rm "${D}/usr/bin/vncserver"
+        rm "${IMAGE}/usr/share/man/man1/"{vncserver,Xvnc}.1
+        rm "${IMAGE}/usr/bin/vncserver"
     fi
 }
 

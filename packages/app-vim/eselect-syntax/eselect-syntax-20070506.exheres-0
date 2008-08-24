@@ -7,7 +7,7 @@ require vim-plugin
 
 SUMMARY="eselect syntax highlighting, filetype and indent settings"
 HOMEPAGE="http://www.gentoo.org/"
-SOURCES="mirror://gentoo/${P}.tar.bz2"
+DOWNLOADS="mirror://gentoo/${PNV}.tar.bz2"
 
 LICENCES="vim"
 SLOT="0"
