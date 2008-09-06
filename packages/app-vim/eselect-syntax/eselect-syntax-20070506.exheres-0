@@ -11,6 +11,6 @@ DOWNLOADS="mirror://gentoo/${PNV}.tar.bz2"
 
 LICENCES="vim"
 SLOT="0"
-PLATFORMS="~x86"
+PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
