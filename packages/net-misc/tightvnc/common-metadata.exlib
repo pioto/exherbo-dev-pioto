@@ -1,0 +1,24 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY=""
+DESCRIPTION="
+"
+HOMEPAGE="http://www.tightvnc.com/"
+DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
+
+LICENCES="GPL-2"
+
+DEPENDENCIES="
+    build:
+        x11-utils/imake
+        x11-utils/xorg-cf-files
+        x11-utils/gccmakedep"
+
+BUGS_TO="pioto@exherbo.org"
+
+REMOTE_IDS="freshmeat:tightvnc"
+
+UPSTREAM_CHANGELOG="http://www.tightvnc.com/whatsnew.html"
+UPSTREAM_DOCUMENTATION="http://www.tightvnc.com/docs.html"
+

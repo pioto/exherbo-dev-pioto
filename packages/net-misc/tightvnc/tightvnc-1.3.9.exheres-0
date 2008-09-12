@@ -1,20 +1,11 @@
 # Copyright 2008 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-SUMMARY=""
-HOMEPAGE=""
-DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
+require common-metadata
 
-LICENCES="GPL-2"
 SLOT="0"
-PLATFORMS="~x86"
+PLATFORMS="~amd64 ~x86"
 MYOPTIONS="server"
-
-DEPENDENCIES="
-    build:
-        x11-utils/imake
-        x11-utils/xorg-cf-files
-        x11-utils/gccmakedep"
 
 WORK="${WORKBASE}/vnc_unixsrc"
 
