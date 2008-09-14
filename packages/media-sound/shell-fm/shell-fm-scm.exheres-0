@@ -1,0 +1,16 @@
+# Copyright 2008 Mike Kelly <pioto@pioto.org>
+# Distributed under the terms of the GNU General Public License v2
+
+require common-metadata
+
+SCM_REPOSITORY="git://github.com/jkramer/shell-fm.git"
+require scm-git
+
+SLOT="0"
+PLATFORMS="~x86"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        media-libs/libmad"
+

@@ -1,0 +1,23 @@
+# Copyright 2008 Mike Kelly <pioto@pioto.org>
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="a console-based player for Last.FM"
+DESCRIPTION="
+shell-fm is a lightweight, console-based player for Last.FM radio streams. It's
+pretty small (the binary is currently a little smaller than 60K, or 50K when
+stripped) and it has most features the \"official\" player has, if not even a
+few more. Additional features are, for example:
+
+    * network interface (control shell-fm remotely)
+    * autoban (automatically ban all tracks of an artist you don't like)
+    * bookmark stations (quickly jump to bookmarked stations with a single key)
+"
+HOMEPAGE="http://nex.scrapping.cc/code/shell-fm/"
+DOWNLOADS=""
+
+LICENCES="|| ( GPL-2 GPL-3 )"
+
+BUGS_TO="pioto@pioto.org"
+
+REMOTE_IDS="freshmeat:shell-fm"
+
