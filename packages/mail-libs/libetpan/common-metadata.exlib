@@ -1,0 +1,21 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="An email client library, for IMAP, POP, etc."
+DESCRIPTION="
+The purpose of this mail library is to provide a portable, efficient
+framework for different kinds of mail access. When using the drivers
+interface, the interface is the same for all kinds of mail access,
+remote and local mailboxes.
+"
+HOMEPAGE="http://libetpan.sourceforge.net/libetpan/"
+DOWNLOADS="mirror://sourceforge/libetpan/${PNV}.tar.gz"
+
+LICENCES="BSD"
+
+BUGS_TO="pioto@exherbo.org"
+
+REMOTE_IDS="sourceforge:libetpan freshmeat:libetpan"
+
+UPSTREAM_DOCUMENTATION="http://libetpan.sourceforge.net/libetpan/doc.html"
+
