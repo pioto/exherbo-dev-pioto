@@ -1,0 +1,25 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require common-metadata
+
+SLOT="0"
+PLATFORMS="~x86"
+MYOPTIONS="crypt dbus spell ssl"
+
+DEPENDENCIES="
+build,run:
+    >=x11-libs/gtk+-2.14:2
+    >=mail-libs/libetpan-0.57
+    dbus? ( sys-apps/dbus )
+    crypt? ( app-crypt/gpgme )
+    spell? ( app-spell/enchant )
+    ssl? ( dev-libs/gnutls )
+"
+#suggested:
+#    mail-filter/spamassassin
+#    mail-filter/bogofilter
+
+DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=( 'ssl gnutls' 'dbus' 'spell enchant'
+    'crypt pgpcore-plugin' 'crypt pgpmime-plugin' 'crypt pgpinline-plugin' 'crypt smime-plugin' )
+
