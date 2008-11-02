@@ -1,8 +1,12 @@
 # Copyright 2008 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-SUMMARY=""
+SUMMARY="a free version of VNC"
 DESCRIPTION="
+TightVNC is a free remote control software package derived from the
+popular VNC software. With TightVNC, you can see the desktop of a remote
+machine and control it with your local mouse and keyboard, just like you
+would do it sitting in the front of that computer. 
 "
 HOMEPAGE="http://www.tightvnc.com/"
 DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
@@ -20,5 +24,8 @@ BUGS_TO="pioto@exherbo.org"
 REMOTE_IDS="freshmeat:tightvnc"
 
 UPSTREAM_CHANGELOG="http://www.tightvnc.com/whatsnew.html"
-UPSTREAM_DOCUMENTATION="http://www.tightvnc.com/docs.html"
+UPSTREAM_DOCUMENTATION="
+http://www.tightvnc.com/intro.html [[ description = [ Introduction ] ]]
+http://www.tightvnc.com/docs.html [[ description = [ Main Documentation ] ]]
+"
 
