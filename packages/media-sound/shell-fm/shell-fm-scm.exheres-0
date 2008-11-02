@@ -7,7 +7,7 @@ SCM_REPOSITORY="git://github.com/jkramer/shell-fm.git"
 require scm-git
 
 SLOT="0"
-PLATFORMS="~x86"
+PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
 DEPENDENCIES="
