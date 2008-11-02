@@ -1,0 +1,27 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="a compatibility layer for Netscape plugins"
+DESCRIPTION="
+nspluginwrapper is an Open Source compatibility plugin for Netscape 4
+(NPAPI) plugins. That is, it enables you to use plugins on platforms
+they were not built for. For example, you can use the Adobe Flash plugin
+on Linux/x86_64, NetBSD and FreeBSD platforms. Another goal of
+nspluginwrapper is to confine plugins into a specific execution domain,
+for reliability or security purposes (with SELinux or RSBAC). i.e. a
+sandbox in Google Chrome terminology.
+"
+HOMEPAGE="http://gwenole.beauchesne.info/projects/nspluginwrapper"
+DOWNLOADS="http://gwenole.beauchesne.info/projects/nspluginwrapper/files/${PNV}.tar.bz2"
+
+LICENCES="GPL-2"
+MYOPTIONS=""
+
+BUGS_TO="pioto@exherbo.org"
+
+REMOTE_IDS="freshmeat:nspluginwrapper"
+
+UPSTREAM_CHANGELOG="http://svn.beauchesne.info/gwenole/projects/nspluginwrapper/tags/release-1.0.0/ChangeLog?revision=HEAD"
+UPSTREAM_DOCUMENTATION="http://gwenole.beauchesne.info/en/projects/nspluginwrapper/help"
+UPSTREAM_RELEASE_NOTES="http://gwenole.beauchesne.info/en/projects/nspluginwrapper/news"
+
