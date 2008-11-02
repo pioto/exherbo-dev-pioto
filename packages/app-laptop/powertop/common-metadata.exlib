@@ -1,0 +1,22 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="a tool for reducing power usage"
+DESCRIPTION="
+Computer programs can make your computer use more power. PowerTOP is a
+Linux tool that helps you find those programs that are misbehaving while
+your computer is idle.
+"
+HOMEPAGE="http://www.lesswatts.org/projects/powertop/"
+DOWNLOADS="http://www.lesswatts.org/projects/powertop/download/${PNV}.tar.gz"
+
+LICENCES="GPL-2"
+
+DEPENDENCIES=""
+
+BUGS_TO="pioto@exherbo.org"
+
+REMOTE_IDS="freshmeat:powertop"
+
+UPSTREAM_CHANGELOG="http://freshmeat.net/redir/powertop/69680/url_changelog/Changelog"
+
