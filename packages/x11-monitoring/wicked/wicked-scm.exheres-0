@@ -1,0 +1,26 @@
+# Copyright 2008 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="a lua library for dynamic widgets in awesome"
+HOMEPAGE="http://awesome.naquadah.org/wiki/index.php?title=Wicked"
+
+SCM_REPOSITORY="git://git.glacicle.com/awesome/wicked.git"
+require scm-git
+
+LICENCES="WTFPL"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+run:
+    dev-lang/lua
+    x11-wm/awesome"
+
+src_install() {
+    insinto /usr/share/awesome/lib
+    doins wicked.lua
+    doman wicked.7.gz
+    dodoc wicked.7.txt
+}
+
