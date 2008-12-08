@@ -5,17 +5,17 @@ require common-metadata
 
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
-MYOPTIONS="crypt dbus spell ssl"
+MYOPTIONS="crypt dbus networkmanager spell ssl"
 
 DEPENDENCIES="
 build,run:
     >=x11-libs/gtk+-2.14:2
     >=mail-libs/libetpan-0.57
     dbus? ( sys-apps/dbus )
-    crypt? ( app-crypt/gpgme )
+    crypt? ( app-crypt/gpgme )i
+    networkmanager? ( net-apps/NetworkManager )
     spell? ( app-spell/enchant )
     ssl? ( dev-libs/gnutls )
-    networkmanager? ( net-apps/NetworkManager )
 "
 #suggested:
 #    mail-filter/spamassassin
