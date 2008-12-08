@@ -12,7 +12,7 @@ build,run:
     >=x11-libs/gtk+-2.14:2
     >=mail-libs/libetpan-0.57
     dbus? ( sys-apps/dbus )
-    crypt? ( app-crypt/gpgme )i
+    crypt? ( app-crypt/gpgme )
     networkmanager? ( net-apps/NetworkManager )
     spell? ( app-spell/enchant )
     ssl? ( dev-libs/gnutls )
