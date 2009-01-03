@@ -1,0 +1,103 @@
+# Copyright 2007,2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+# Based on "snlnj-110.45.ebuild" from Gentoo, which is
+#     Copyright 1999-2007 Gentoo Foundation
+
+SUMMARY="Standard ML of New Jersey compiler and libraries"
+DESCRIPTION="
+"
+HOMEPAGE="http://www.smlnj.org"
+DOWNLOADS="
+platform:x86? ( http://smlnj.cs.uchicago.edu/dist/working/${PV}/boot.x86-unix.tgz -> ${PNV}-boot.x86-unix.tgz )
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/config.tgz -> ${PNV}-config.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/MLRISC.tgz -> ${PNV}-MLRISC.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/runtime.tgz -> ${PNV}-runtime.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/ml-lex.tgz -> ${PNV}-ml-lex.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/ml-lpt.tgz -> ${PNV}-ml-lpt.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/ml-yacc.tgz -> ${PNV}-ml-yacc.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/ml-burg.tgz -> ${PNV}-ml-burg.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/smlnj-lib.tgz -> ${PNV}-smlnj-lib.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/cml.tgz -> ${PNV}-cml.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/eXene.tgz -> ${PNV}-eXene.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/trace-debug-profile.tgz -> ${PNV}-trace-debug-profile.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/nlffi.tgz -> ${PNV}-nlffi.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/pgraph.tgz -> ${PNV}-pgraph.tgz
+http://smlnj.cs.uchicago.edu/dist/working/${PV}/heap2asm.tgz -> ${PNV}-heap2asm.tgz
+"
+
+LICENCES="BSD"
+MYOPTIONS="
+platform: x86"
+
+DEPENDENCIES=""
+
+BUGS_TO="pioto@exherbo.org"
+
+REMOTE_IDS=""
+
+UPSTREAM_CHANGELOG="http://www.smlnj.org/dist/working/${PV}/NOTES/HISTORY"
+UPSTREAM_DOCUMENTATION="http://smlnj.org/doc/literature.html"
+UPSTREAM_RELEASE_NOTES="http://smlnj.org/dist/working/${PV}/${PV}-README.html"
+
+SMLNJ_DEST="/usr/lib/smlnj"
+SMLNJ_TARGETS="./config/targets"
+
+GEN_POSIX_NAMES_PATCH="15i\n#\n.\nj\nw\nq"
+
+ARCH_BOOT="sml.boot.${ARCH}-unix"
+
+src_unpack() {
+    default
+
+    dirs=`ls ${WORKBASE}`
+    mkdir ${WORKBASE}/base
+
+    mv ${WORKBASE}/runtime ${WORKBASE}/base
+
+    printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKBASE}/src/runtime/config/gen-posix-names.sh
+}
+
+src_compile() {
+    export SMLNJ_HOME=${WORKBASE}
+    cd ${WORKBASE}
+
+    echo "request ml-burg" >> $SMLNJ_TARGETS
+    echo "request eXene" >> $SMLNJ_TARGETS
+
+    LC_ALL=C ./config/install.sh || die
+}
+
+src_install() {
+    dodir ${SMLNJ_DEST}
+    cd ${WORKBASE}
+
+    sed -i -e "s/head -1/head -n 1/" bin/.run-sml
+
+    exeinto ${SMLNJ_DEST}/bin
+    doexe bin/{.run-sml,.link-sml,.arch-n-opsys,ml-makedepend,ml-build}
+
+    exeinto ${SMLNJ_DEST}/bin/.run
+    doexe bin/.run/*
+
+    insinto ${SMLNJ_DEST}/bin/.heap
+    doins bin/.heap/*
+
+    for i in ml-lex ml-yacc sml ml-burg ; do
+        dosym .run-sml ${SMLNJ_DEST}/bin/$i
+    done
+
+    cp -Rp ${WORKBASE}/lib ${IMAGE}/${SMLNJ_DEST}
+
+    hereenvd /etc/env.d/10smlnj <<EOF
+SMLNJ_HOME=${SMLNJ_DEST}
+EOF
+
+    #need to provide symlinks into /usr/bin
+    dodir /usr/bin
+    dosym ${SMLNJ_DEST}/bin/ml-build /usr/bin/
+    dosym ${SMLNJ_DEST}/bin/ml-burg /usr/bin
+    dosym ${SMLNJ_DEST}/bin/ml-lex /usr/bin
+    dosym ${SMLNJ_DEST}/bin/ml-makedepend /usr/bin
+    dosym ${SMLNJ_DEST}/bin/ml-yacc /usr/bin
+    dosym ${SMLNJ_DEST}/bin/sml /usr/bin
+}
