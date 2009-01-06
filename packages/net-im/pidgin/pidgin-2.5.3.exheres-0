@@ -57,9 +57,12 @@ MYOPTIONS="
 
 DEPENDENCIES="
 build:
+    dev-lang/perl
+    dev-perl/XML-Parser
     gtk? ( x11-proto/scrnsaverproto )
 build+run:
     dev-libs/glib
+    dev-libs/libxml2
     gtk? (
         x11-libs/gtk+
         x11-libs/libXScrnSaver
