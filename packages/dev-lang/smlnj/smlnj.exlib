@@ -88,7 +88,7 @@ src_install() {
 
     cp -Rp ${WORKBASE}/lib ${IMAGE}/${SMLNJ_DEST}
 
-    hereenvd /etc/env.d/10smlnj <<EOF
+    hereenvd 10smlnj <<EOF
 SMLNJ_HOME=${SMLNJ_DEST}
 EOF
 
