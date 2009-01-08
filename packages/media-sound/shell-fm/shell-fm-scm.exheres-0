@@ -14,3 +14,7 @@ DEPENDENCIES="
     build+run:
         media-libs/libmad"
 
+src_prepare() {
+    sed -i '/^MANDIR/s,/man,/share/man,' Makefile \
+        || die 'MANDIR sed failed'
+}
