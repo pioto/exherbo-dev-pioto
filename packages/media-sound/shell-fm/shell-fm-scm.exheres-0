@@ -8,13 +8,16 @@ require scm-git
 
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
-MYOPTIONS=""
+MYOPTIONS="ao"
 
 DEPENDENCIES="
-    build+run:
-        media-libs/libmad"
+build+run:
+    media-libs/libmad
+    ao? ( media-libs/libao )
+"
 
 src_prepare() {
     sed -i '/^MANDIR/s,/man,/share/man,' Makefile \
         || die 'MANDIR sed failed'
 }
+
