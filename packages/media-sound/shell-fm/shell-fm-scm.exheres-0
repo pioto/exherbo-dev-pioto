@@ -16,8 +16,15 @@ build+run:
     ao? ( media-libs/libao )
 "
 
-src_prepare() {
-    sed -i '/^MANDIR/s,/man,/share/man,' Makefile \
-        || die 'MANDIR sed failed'
+DEFAULT_SRC_INSTALL_PARAMS=(
+    "MANDIR=/usr/share/man"
+)
+
+src_compile() {
+    if ! option 'ao'; then
+        # don't link against libao unless the option is enabled.
+        DEFAULT_SRC_COMPILE_PARAMS=( 'LIBAO=' "LDFLAGS=$(pkg-config mad --libs)" )
+    fi
+    default
 }
 
