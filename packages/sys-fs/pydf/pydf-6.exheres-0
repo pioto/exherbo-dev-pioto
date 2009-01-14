@@ -1,0 +1,29 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="df with colors and bar graphs"
+DESCRIPTION="
+pydf is all-singing, all-dancing, fully colourised df(1)-clone
+written in python.
+"
+HOMEPAGE="http://kassiopeia.juls.savba.sk/~garabik/software/pydf/"
+DOWNLOADS="${HOMEPAGE}${PN}_${PV}.tar.gz"
+
+LICENCES="public-domain"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+run:
+    >=dev-lang/python-2.3:*
+"
+
+src_install() {
+    dodoc COPYING README
+    dobin pydf
+    doman pydf.1
+    insinto /etc
+    doins pydfrc
+}
+
