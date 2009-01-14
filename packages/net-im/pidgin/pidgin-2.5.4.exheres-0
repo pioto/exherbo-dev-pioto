@@ -46,6 +46,7 @@ MYOPTIONS="
     startup-notification
     networkmanager
     ssl
+    spell
 
     (
         gtk
@@ -84,6 +85,7 @@ build+run:
     tcl? ( dev-lang/tcl )
     tk? ( dev-lang/tk )
     ssl? ( dev-libs/gnutls )
+    spell? ( app-spell/gtkspell )
 "
 
 DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
@@ -100,6 +102,7 @@ DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
     'tcl'
     'tk'
     'ssl gnutls yes'
+    'spell gtkspell'
 )
 
 DEFAULT_SRC_CONFIGURE_OPTION_WITHS=(
@@ -109,7 +112,6 @@ DEFAULT_SRC_CONFIGURE_OPTION_WITHS=(
 
 DEFAULT_SRC_CONFIGURE_PARAMS=(
     # until we get exheres for these:
-    '--disable-gtkspell'
     '--disable-meanwhile'
     '--enable-nss=no'
 )
