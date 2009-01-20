@@ -1,0 +1,50 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require versionator
+
+MY_PV="$(replace_all_version_separators '_')"
+
+SUMMARY="The free version of RealVNC"
+DESCRIPTION="
+RealVNC provides remote control software which lets you see and interact
+with desktop applications across any network.
+
+The software has a widespread user base from individuals to the largest
+multi-national companies. Founded by the original developers of VNC to
+promote, enhance and commercialise VNC.
+"
+HOMEPAGE="http://www.realvnc.com/ http://realvnc.com/products/free/$(get_version_component_range 1-2)/"
+DOWNLOADS="http://dev.exherbo.org/~pioto/distfiles/vnc-${MY_PV}-unixsrc.tar.gz"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+build+run:
+    sys-libs/zlib
+    !net-misc/tightvnc [[ note = [ conflicting installs of vncviewer, vncpasswd ] ]]
+"
+
+WORK="${WORKBASE}/vnc-${MY_PV}-unixsrc/unix"
+
+DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/${PNV}-Add-missing-include-cstdlib-s.patch" )
+
+DEFAULT_SRC_CONFIGURE_PARAMS=( '--with-installed-zlib' )
+
+UPSTREAM_RELEASE_NOTES="http://realvnc.com/products/free/$(get_version_component_range 1-2)/release-notes.html"
+
+src_prepare() {
+    cd "${WORKBASE}/vnc-${MY_PV}-unixsrc"
+    default
+}
+
+src_install() {
+    dodir "/usr/bin" "/usr/share/man/man1"
+    ./vncinstall "${IMAGE}/usr/bin" \
+        "${IMAGE}/usr/share/man" \
+        || die 'vncinstall failed'
+}
+

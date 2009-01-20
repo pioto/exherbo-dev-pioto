@@ -14,10 +14,13 @@ DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
 LICENCES="GPL-2"
 
 DEPENDENCIES="
-    build:
-        x11-utils/imake
-        x11-utils/xorg-cf-files
-        x11-utils/gccmakedep"
+build:
+    x11-utils/imake
+    x11-utils/xorg-cf-files
+    x11-utils/gccmakedep
+build+run:
+    !net-misc/realvnc [[ note = [ conflicting installs of vncviewer, vncpasswd ] ]]
+"
 
 BUGS_TO="pioto@exherbo.org"
 
