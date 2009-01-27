@@ -1,0 +1,41 @@
+Source: Me
+Upstream: Not yet.
+Reason: missing #includes
+
+From 7786499316dfe5d19a34da5f8970b57f619d29e2 Mon Sep 17 00:00:00 2001
+From: Mike Kelly <pioto@pioto.org>
+Date: Mon, 26 Jan 2009 21:44:13 -0500
+Subject: [PATCH] Add missing #include <string.h>
+
+---
+ src/freq.cpp    |    1 +
+ src/toshiba.cpp |    1 +
+ 2 files changed, 2 insertions(+), 0 deletions(-)
+
+diff --git a/src/freq.cpp b/src/freq.cpp
+index 80e5cce..9b21059 100644
+--- a/src/freq.cpp
++++ b/src/freq.cpp
+@@ -32,6 +32,7 @@
+ #include <iomanip>
+ #include <fstream>
+ #include <dirent.h>
++#include <string.h>
+ #include "acpitool.h"
+ #include "freq.h"
+ 
+diff --git a/src/toshiba.cpp b/src/toshiba.cpp
+index c000ed1..f91c50a 100644
+--- a/src/toshiba.cpp
++++ b/src/toshiba.cpp
+@@ -32,6 +32,7 @@
+ #include <iostream>
+ #include <iomanip>
+ #include <fstream>
++#include <string.h>
+ #include "toshiba.h"
+ 
+ using namespace std;
+-- 
+1.6.1.1
+

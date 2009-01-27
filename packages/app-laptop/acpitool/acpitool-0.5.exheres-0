@@ -1,0 +1,29 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="(yet another) Linux ACPI client."
+DESCRIPTION="
+AcpiTool is (yet another) Linux ACPI client. It's a small command-line
+application, intended to be a replacement for the apm tool. The primary
+target audience are laptop users, since these people are most interested
+in stuff like battery status, thermal status and the ability to put
+their precious laptop to sleep. Most of this does not apply to desktop
+systems.
+
+Besides \"basic\" ACPI information like battery status, AC presence, etc .
+. . , Acpitool also supports various extensions for Toshiba, Asus and
+IBM Thinkpad laptops, allowing you to change the LCD brightness level,
+toggle fan on/off, and more. 
+"
+HOMEPAGE="http://freeunix.dyndns.org:8088/site2/acpitool.shtml"
+DOWNLOADS="http://freeunix.dyndns.org:8088/ftp_site/pub/unix/acpitool/${PNV}.tar.bz2"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES=""
+
+DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/0001-Add-missing-include-string.h.patch" )
+
