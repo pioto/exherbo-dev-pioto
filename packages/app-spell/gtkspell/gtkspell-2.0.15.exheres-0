@@ -17,13 +17,12 @@ MYOPTIONS="doc nls"
 
 DEPENDENCIES="
 build:
-    dev-lang/perl
+    dev-lang/perl:*
     dev-util/intltool
-    dev-perl/XML-Parser
-    sys-devel/gettext
     doc? ( dev-doc/gtk-doc )
+    nls? ( sys-devel/gettext )
 build+run:
-    x11-libs/gtk+
+    x11-libs/gtk+:2
     app-spell/enchant
 "
 
@@ -43,8 +42,8 @@ src_install() {
     default
 
     if ! option 'doc'; then
-        (cd "${IMAGE}/usr/share"; rmdir -p -v "gtk-doc/html/${PN}/" ) \
-        || die "failed to remove (supposedly) empty gtk-doc dir"
+        rmdir "${IMAGE}"/usr/share/gtk-doc/{html{/${PN}/,},} ||
+            die "failed to remove (supposedly) empty gtk-doc dir"
     fi
 }
 
