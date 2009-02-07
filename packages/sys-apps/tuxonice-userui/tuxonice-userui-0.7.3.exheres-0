@@ -1,0 +1,37 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="user interface for suspend/resume with TuxOnIce"
+DESCRIPTION="
+The user interface for TuxOnIce, TuxOnIce-UserUI, is a separate program that
+runs in userspace - it does not exist in the kernel. This allows for greater
+flexibility in the user interface, and less potential for fatal issues to arise
+in kernel-space. TuxOnIce-UserUI is an optional component of TuxOnIce, however,
+it can make your hibernation experience much more enjoyable.
+
+Having TuxOnIce-UserUI allows you to interact with the hibernation process as
+it happens. This mean you can press Escape to cancel a hibernation or resuming,
+press R to toggle rebooting at the end of hibernating, change the verbosity
+level to see what's going on, etc. 
+"
+HOMEPAGE="http://www.tuxonice.net/userui"
+DOWNLOADS="http://www.tuxonice.net/downloads/all/${PNV}.tar.gz"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES=""
+
+DEFAULT_SRC_COMPILE_PARAMS=(
+    tuxoniceui_text
+)
+
+BUGS_TO="pioto@exherbo.org"
+
+src_install() {
+    dosbin tuxoniceui_text
+    dodoc AUTHORS ChangeLog KERNEL_API README TODO USERUI_API
+}
+
