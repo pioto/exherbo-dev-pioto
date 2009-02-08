@@ -2,7 +2,7 @@
 # Distributed under the terms of the GNU General Public License v2
 
 VIM_PLUGIN_VIM_VERSION="7.0"
-require vim-plugin versionator
+require vim-plugin
 
 MY_PV="${PV/#1.99./beta}"
 
