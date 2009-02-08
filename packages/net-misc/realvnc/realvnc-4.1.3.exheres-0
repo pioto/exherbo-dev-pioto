@@ -14,7 +14,7 @@ The software has a widespread user base from individuals to the largest
 multi-national companies. Founded by the original developers of VNC to
 promote, enhance and commercialise VNC.
 "
-HOMEPAGE="http://www.realvnc.com/ http://realvnc.com/products/free/$(get_version_component_range 1-2)/"
+HOMEPAGE="http://www.realvnc.com/ http://realvnc.com/products/free/$(ever range 1-2)/"
 DOWNLOADS="http://dev.exherbo.org/~pioto/distfiles/vnc-${MY_PV}-unixsrc.tar.gz"
 
 LICENCES="GPL-2"
@@ -43,7 +43,7 @@ DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/${PNV}-Add-missing-include-cstdlib-s.pat
 
 DEFAULT_SRC_CONFIGURE_PARAMS=( '--with-installed-zlib' )
 
-UPSTREAM_RELEASE_NOTES="http://realvnc.com/products/free/$(get_version_component_range 1-2)/release-notes.html"
+UPSTREAM_RELEASE_NOTES="http://realvnc.com/products/free/$(ever range 1-2)/release-notes.html"
 
 src_prepare() {
     cd "${WORKBASE}/vnc-${MY_PV}-unixsrc"
