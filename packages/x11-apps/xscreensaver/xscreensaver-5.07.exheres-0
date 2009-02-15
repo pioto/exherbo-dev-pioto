@@ -13,7 +13,7 @@ DOWNLOADS="http://www.jwz.org/${PN}/${PNV}.tar.gz"
 
 LICENCES="BSD"
 SLOT="0"
-PLATFORMS="~amd64"
+PLATFORMS="~amd64 ~x86"
 MYOPTIONS="
 gtk [[ description = [ GTK+ support, needed for xscreensaver-demo ] ]]
 jpeg
