@@ -25,7 +25,7 @@ MYOPTIONS=""
 
 DEPENDENCIES="
 build+run:
-    media-libs/libSDL
+    media-libs/SDL
 "
 
 DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/0001-More-missing-includes.patch" )
