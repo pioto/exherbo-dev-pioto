@@ -8,3 +8,5 @@ SUMMARY="Syntax Highlighting and Textile rendering / preview support "
 SLOT="0"
 PLATFORMS="~amd64"
 
+WORK="${WORKBASE}/${PN}"
+
