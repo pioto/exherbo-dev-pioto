@@ -1,0 +1,10 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require vim-plugin [ vim_version=7.0 script_id=2305 src_id=9427 ]
+
+SUMMARY="Syntax Highlighting and Textile rendering / preview support "
+
+SLOT="0"
+PLATFORMS="~amd64"
+
