@@ -1,0 +1,24 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+MY_PN="onig"
+
+SUMMARY="a regular expressions library"
+DESCRIPTION="
+Oniguruma is a regular expressions library.
+The characteristics of this library is that different character encoding
+for every regular expression object can be specified.
+(supported APIs: GNU regex, POSIX and Oniguruma native) 
+"
+HOMEPAGE="http://www.geocities.jp/kosako3/oniguruma/"
+DOWNLOADS="${HOMEPAGE}/archive/${MY_PN}-${PV}.tar.gz"
+
+LICENCES="FIXME"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES=""
+
+WORK="${WORKBASE}/${MY_PN}-${PV}"
+
