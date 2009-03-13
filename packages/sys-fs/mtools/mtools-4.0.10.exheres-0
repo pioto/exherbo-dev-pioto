@@ -1,0 +1,25 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require gnu
+
+SUMMARY="utilities to access MS-DOS disks from Unix without mounting them"
+DESCRIPTION="
+Mtools is a collection of utilities to access MS-DOS disks from Unix
+without mounting them. It supports Win'95 style long file names, OS/2
+Xdf disks and 2m disks (store up to 1992k on a high density 3 1/2 disk).
+
+Mtools can now handle the long filenames of Windows NT and Windows 95.
+Mtools is maintained by David Niemi and me (Alain Knaff). Mtools-4.0.0
+has been released on November 29th, 2009.
+"
+
+LICENCES="GPL-3"
+SLOT="0"
+PLATFORMS="~amd64"
+
+# too lazy to figure out the deps now
+DEFAULT_SRC_CONFIGURE_PARAMS=(
+    --without-x
+)
+
