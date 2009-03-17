@@ -10,15 +10,33 @@ would do it sitting in the front of that computer.
 "
 HOMEPAGE="http://www.tightvnc.com/"
 DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
+MYOPTIONS="server"
 
 LICENCES="GPL-2"
 
 DEPENDENCIES="
 build:
     x11-utils/imake
-    x11-utils/xorg-cf-files
+    >=x11-utils/xorg-cf-files-1.0.2-r1
     x11-utils/gccmakedep
+
+    x11-proto/inputproto
+    x11-proto/kbproto
+    x11-proto/scrnsaverproto
+    x11-proto/xextproto
+    x11-proto/xproto
+
 build+run:
+    x11-libs/libXaw
+    x11-libs/libXmu
+    x11-libs/libXt
+    x11-libs/libSM
+    x11-libs/libICE
+    x11-libs/libXpm
+    x11-libs/libXext
+    x11-libs/libX11
+    media-libs/jpeg
+
     !net-misc/realvnc [[ note = [ conflicting installs of vncviewer, vncpasswd ] ]]
 "
 
@@ -31,4 +49,30 @@ UPSTREAM_DOCUMENTATION="
 http://www.tightvnc.com/intro.html [[ description = [ Introduction ] ]]
 http://www.tightvnc.com/docs.html [[ description = [ Main Documentation ] ]]
 "
+
+WORK="${WORKBASE}/vnc_unixsrc"
+
+src_configure() {
+    xmkmf || die "xmkmf failed"
+}
+
+src_compile() {
+    emake World || die "make World failed"
+    if optionq "server" ; then
+        cd Xvnc
+        ./configure || die "configure failed"
+        emake
+    fi
+}
+
+src_install() {
+    dodir "/usr/bin" "/usr/share/man/man1"
+    ./vncinstall "${IMAGE}/usr/bin" "${IMAGE}/usr/share/man" \
+        || die "vncinstall failed"
+
+    if ! optionq "server" ; then
+        rm "${IMAGE}/usr/share/man/man1/"{vncserver,Xvnc}.1
+        rm "${IMAGE}/usr/bin/vncserver"
+    fi
+}
 
