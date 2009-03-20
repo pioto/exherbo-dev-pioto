@@ -1,9 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require versionator
-
-MY_PV="$(replace_all_version_separators '_')"
+MY_PV="$(ever replace_all '_')"
 
 SUMMARY="The free version of RealVNC"
 DESCRIPTION="
