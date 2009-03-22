@@ -1,4 +1,4 @@
-# Copyright 2008 Mike Kelly
+# Copyright 2008, 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="command line client to display basic ACPI info"
@@ -11,7 +11,13 @@ HOMEPAGE="http://sourceforge.net/projects/acpiclient/"
 DOWNLOADS="mirror://sourceforge/acpiclient/${PNV}.tar.gz"
 
 LICENCES="GPL"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES=""
 
 BUGS_TO="pioto@exherbo.org"
 
-REMOTE_IDS="freshmeat:acpi"
+REMOTE_IDS="freshmeat:acpi sourceforge:acpi"
+
