@@ -21,10 +21,11 @@ DEFAULT_SRC_INSTALL_PARAMS=(
 )
 
 src_compile() {
-    if ! option 'ao'; then
-        # don't link against libao unless the option is enabled.
-        DEFAULT_SRC_COMPILE_PARAMS=( 'LIBAO=' "LDFLAGS=$(pkg-config mad --libs)" )
+    if option !ao ; then
+        # Don't link against libao unless the option is enabled.
+        emake LIBAO= LDFLAGS="$(pkg-config mad --libs)"
+    else
+        default
     fi
-    default
 }
 
