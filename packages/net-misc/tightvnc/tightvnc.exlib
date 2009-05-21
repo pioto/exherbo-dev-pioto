@@ -1,4 +1,4 @@
-# Copyright 2008 Mike Kelly
+# Copyright 2008, 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="a free version of VNC"
@@ -17,7 +17,7 @@ LICENCES="GPL-2"
 DEPENDENCIES="
 build:
     x11-utils/imake
-    >=x11-utils/xorg-cf-files-1.0.2-r1
+    x11-utils/xorg-cf-files[>=1.0.2-r1]
     x11-utils/gccmakedep
 
     x11-proto/inputproto
