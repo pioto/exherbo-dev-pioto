@@ -5,7 +5,7 @@ SUMMARY="Basic finger and fingerd from the netkit package."
 HOMEPAGE="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/"
 DOWNLOADS="ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/${PNV}.tar.gz"
 
-LICENCES="BSD"
+LICENCES="BSD-3"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""

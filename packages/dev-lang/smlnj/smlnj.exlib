@@ -25,7 +25,7 @@ http://smlnj.cs.uchicago.edu/dist/working/${PV}/pgraph.tgz -> ${PNV}-pgraph.tgz
 http://smlnj.cs.uchicago.edu/dist/working/${PV}/heap2asm.tgz -> ${PNV}-heap2asm.tgz
 "
 
-LICENCES="BSD"
+LICENCES="BSD-3"
 MYOPTIONS="
 platform: x86"
 
