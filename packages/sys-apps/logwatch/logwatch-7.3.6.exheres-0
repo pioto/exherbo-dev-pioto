@@ -1,0 +1,51 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="customizable log analysis system"
+DESCRIPTION="
+Logwatch is a customizable log analysis system. Logwatch parses through
+your system's logs for a given period of time and creates a report
+analyzing areas that you specify, in as much detail as you require.
+Logwatch is easy to use and will work right out of the package on most
+systems.
+"
+HOMEPAGE="http://www.logwatch.org/"
+DOWNLOADS="ftp://ftp.kaybee.org/pub/linux/${PNV}.tar.gz"
+
+LICENCES="MIT"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        dev-lang/perl:*
+    post,suggested:
+        mail-client/mailx [[ description = [ Used for the --mail option ] ]]
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+src_install() {
+    keepdir /etc/logwatch/{scripts,conf/logfiles,conf/services}
+    keepdir /usr/share/logwatch/dist.conf/{logfile,services}
+    keepdir /var/cache/logwatch
+
+    touch "${IMAGE}"/etc/logwatch/conf/{logwatch,ignore,override}.conf
+
+    insinto /usr/share/logwatch/default.conf
+    doins -r conf/*
+    insinto /usr/share/logwatch/lib
+    doins -r lib/*
+
+    insopts -m0755
+    insinto /usr/share/logwatch/scripts
+    doins -r scripts/*
+
+    dodoc README HOWTO-Customize-LogWatch project/CHANGES
+    doman logwatch.8
+
+    dodir /usr/sbin
+    dosym /usr/share/logwatch/scripts/logwatch.pl /usr/sbin/logwatch
+}
+
