@@ -18,8 +18,9 @@ PLATFORMS="~amd64"
 MYOPTIONS=""
 
 DEPENDENCIES="
-    build+run:
+    run:
         dev-lang/perl:*
+        dev-perl/MIME-Base64
     post,suggested:
         mail-client/mailx [[ description = [ Used for the --mail option ] ]]
 "
