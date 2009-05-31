@@ -20,13 +20,11 @@ DOWNLOADS="mirror://sourceforge/${PN}/${PNV}.tar.gz"
 
 LICENCES="GPL-2"
 SLOT="0"
-PLATFORMS="~amd64"
+PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
 DEPENDENCIES="
 build+run:
     media-libs/SDL
 "
-
-DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/0001-More-missing-includes.patch" )
 
