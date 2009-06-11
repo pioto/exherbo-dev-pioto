@@ -3,7 +3,7 @@
 # Based on "snlnj-110.45.ebuild" from Gentoo, which is
 #     Copyright 1999-2007 Gentoo Foundation
 
-require ${PN}
+require smlnj
 
 SLOT="0"
 PLATFORMS="-* ~x86"
