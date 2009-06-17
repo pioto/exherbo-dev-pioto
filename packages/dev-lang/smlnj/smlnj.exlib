@@ -29,7 +29,9 @@ LICENCES="BSD-3"
 MYOPTIONS="
 platform: x86"
 
-DEPENDENCIES=""
+DEPENDENCIES="
+build:
+    sys-apps/ed"
 
 BUGS_TO="pioto@exherbo.org"
 
@@ -46,6 +48,8 @@ GEN_POSIX_NAMES_PATCH="15i\n#\n.\nj\nw\nq"
 
 ARCH_BOOT="sml.boot.${ARCH}-unix"
 
+WORK="${WORKBASE}"
+
 src_unpack() {
     default
 
@@ -54,12 +58,12 @@ src_unpack() {
 
     mv ${WORKBASE}/runtime ${WORKBASE}/base
 
-    printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKBASE}/src/runtime/config/gen-posix-names.sh
+    printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKBASE}/src/runtime/config/gen-posix-names.sh \
+        || die 'ed failed'
 }
 
 src_compile() {
     export SMLNJ_HOME=${WORKBASE}
-    cd ${WORKBASE}
 
     echo "request ml-burg" >> $SMLNJ_TARGETS
     echo "request eXene" >> $SMLNJ_TARGETS
@@ -69,7 +73,6 @@ src_compile() {
 
 src_install() {
     dodir ${SMLNJ_DEST}
-    cd ${WORKBASE}
 
     sed -i -e "s/head -1/head -n 1/" bin/.run-sml
 
