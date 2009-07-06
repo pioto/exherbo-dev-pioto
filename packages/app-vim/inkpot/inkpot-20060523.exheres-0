@@ -1,0 +1,17 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require vim-plugin [ vim_version=7.0 script_id=1143 src_id=5747 script_type=colors src_suffix=vim ]
+
+SUMMARY="Inkpot, a dark scheme for GUI and 88/256 colour terms"
+DESCRIPTION="
+A darkish scheme which works in the GUI and in some 88 colour terminals
+(urxvt, for example) and 256 colour terminals (xterm with TERM=xterm-256
+seems to work). This won't work in regular 8/16 colour terms, and
+depending upon your setup you may need to sacrifice a few goats to get
+the 88/256 things to work.
+"
+
+SLOT="0"
+PLATFORMS="~amd64"
+
