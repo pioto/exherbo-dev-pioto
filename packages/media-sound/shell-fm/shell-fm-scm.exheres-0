@@ -1,8 +1,10 @@
 # Copyright 2008, 2009 Mike Kelly <pioto@pioto.org>
 # Distributed under the terms of the GNU General Public License v2
 
+require vim-plugin
+
 SCM_REPOSITORY="git://github.com/jkramer/shell-fm.git"
-require scm-git vim-plugin
+require scm-git
 
 SUMMARY="a console-based player for Last.FM"
 DESCRIPTION="
@@ -37,10 +39,6 @@ build+run:
 DEFAULT_SRC_INSTALL_PARAMS=(
     "MANDIR=/usr/share/man"
 )
-
-src_unpack() {
-    scm_src_unpack
-}
 
 src_compile() {
     if option !ao ; then
