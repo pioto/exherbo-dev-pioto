@@ -1,0 +1,40 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require multilib
+
+MY_PV="${PV%_p*}"
+MY_PNV="${PN}-${MY_PV}"
+JUMBO_PATCH="${PV#*_p}"
+
+SUMMARY=""
+DESCRIPTION="
+"
+HOMEPAGE="http://www.trilon.com/xv/ http://www.sonic.net/~roelofs/greg_xv.html"
+DOWNLOADS="
+    ftp://ftp.cis.upenn.edu/pub/${PN}/${MY_PNV}.tar.gz
+    mirror://sourceforge/png-mng/${MY_PNV}-jumbo-patches-${JUMBO_PATCH}.tar.gz"
+
+LICENCES="xv"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+build+run:
+    media-libs/jasper
+"
+
+WORK="${WORKBASE}/${MY_PNV}"
+
+src_prepare() {
+    expatch "${WORKBASE}/${MY_PNV}-jumbo-fix-enh-patch-${JUMBO_PATCH}.txt"
+    sed \
+        -e "s,^PREFIX = .*,PREFIX = /usr," \
+        -i Makefile || die "prefix sed failed"
+    sed \
+        -e "s,^JP2KDIR = .*,JP2KDIR = /usr/$(get_libdir)," \
+        -e "s,^JP2KINC = .*,JP2KINC = -I/usr/include," \
+        -i Makefile || die "jasper sed failed"
+}
+
