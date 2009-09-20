@@ -1,0 +1,76 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+# Based in part upon 'truecrypt-6.2a.ebuild' from Gentoo, which is:
+#     Copyright 1999-2009 Gentoo Foundation
+
+require flag-o-matic toolchain-funcs
+
+RESTRICT="fetch"
+
+SUMMARY="Free Open-Source Disk Encryption Software"
+DESCRIPTION="
+Free open-source disk encryption software for Windows Vista/XP, Mac OS X, and Linux
+Main Features:
+
+    * Creates a virtual encrypted disk within a file and mounts it as a real disk.
+
+    * Encrypts an entire partition or storage device such as USB flash drive or hard drive.
+
+    * Encrypts a partition or drive where Windows is installed (pre-boot authentication).
+
+    * Encryption is automatic, real-time (on-the-fly) and transparent.
+
+    * Parallelization and pipelining allow data to be read and written as fast as if the drive was not encrypted.
+
+    * Provides plausible deniability, in case an adversary forces you to reveal the password:
+
+      Hidden volume (steganography) and hidden operating system.
+
+    * Encryption algorithms: AES-256, Serpent, and Twofish. Mode of operation: XTS.
+"
+HOMEPAGE="http://www.truecrypt.org/"
+DOWNLOADS="${PNV}.tar.gz"
+
+LICENCES="truecrypt-2.7"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build:
+        dev-util/pkg-config
+    build+run:
+        dev-libs/pkcs11-helper
+        sys-fs/fuse
+        sys-fs/lvm2
+        x11-libs/wxGTK[>=2.8&<2.9][unicode][threads]
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+WORK="${WORKBASE}/${PNV}-source"
+
+src_compile() {
+    append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
+    emake \
+        VERBOSE=1 \
+        CC="$(tc-getCC)" \
+        CXX="$(tc-getCXX)" \
+        AR="$(tc-getAR)" \
+        RANLIB="$(tc-getRANLIB)" \
+        TC_EXTRA_CFLAGS="${CFLAGS}" \
+        TC_EXTRA_CXXFLAGS="${CXXFLAGS}" \
+        TC_EXTRA_LFLAGS="${LDFLAGS}" \
+        WX_CONFIG="/usr/bin/wx-config" \
+        PKCS11_INC="/usr/include/pkcs11-helper-1.0"
+}
+
+src_test() {
+    "${WORK}"/Main/truecrypt --text --test || die "tests failed"
+}
+
+src_install() {
+    dobin Main/truecrypt
+    dodoc Readme.txt "Release/Setup Files/TrueCrypt User Guide.pdf"
+}
+
