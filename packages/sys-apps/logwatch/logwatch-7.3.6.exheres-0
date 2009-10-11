@@ -20,7 +20,7 @@ MYOPTIONS=""
 DEPENDENCIES="
     run:
         dev-lang/perl:*
-    post,suggested:
+    suggestion:
         mail-client/mailx [[ description = [ Used for the --mail option ] ]]
 "
 

@@ -32,7 +32,7 @@ DEPENDENCIES="
             dev-lang/tk
             dev-tcl/tcllib
         )
-    suggested,post:
+    suggestion:
         vim-syntax? ( app-vim/remind )
 "
 
