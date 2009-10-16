@@ -23,6 +23,8 @@ MYOPTIONS="
 platform:
     amd64 x86"
 
+RESTRICT="mirror"
+
 DEPENDENCIES="
     x11-libs/qt:3
 "
