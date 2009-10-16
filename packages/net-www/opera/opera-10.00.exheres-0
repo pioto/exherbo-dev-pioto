@@ -10,10 +10,11 @@ HOMEPAGE="http://www.opera.com/"
 
 # Yay inconsistency...
 DOWNLOADS="
-platform:x86? (
-    ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/i386/shared/${PNV}.gcc4-shared-qt3.i386.tar.bz2 )
-platform:amd64? (
-    ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/x86_64/${PNV}.gcc4-shared-qt3.x86_64.tar.bz2 )
+listed-only:
+    platform:x86? (
+        ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/i386/shared/${PNV}.gcc4-shared-qt3.i386.tar.bz2 )
+    platform:amd64? (
+        ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/x86_64/${PNV}.gcc4-shared-qt3.x86_64.tar.bz2 )
 "
 
 LICENCES="opera"
@@ -22,8 +23,6 @@ PLATFORMS="~amd64 ~x86"
 MYOPTIONS="
 platform:
     amd64 x86"
-
-RESTRICT="mirror"
 
 DEPENDENCIES="
     x11-libs/qt:3
