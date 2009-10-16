@@ -12,9 +12,9 @@ HOMEPAGE="http://www.opera.com/"
 DOWNLOADS="
 listed-only:
     platform:x86? (
-        ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/i386/shared/${PNV}.gcc4-shared-qt3.i386.tar.bz2 )
+        ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/i386/${PNV}.gcc4-qt4.i386.tar.bz2 )
     platform:amd64? (
-        ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/x86_64/${PNV}.gcc4-shared-qt3.x86_64.tar.bz2 )
+        ftp://ftp.opera.com/pub/opera/linux/${PV/./}/final/en/x86_64/${PNV}.gcc4-qt4.x86_64.tar.bz2 )
 "
 
 LICENCES="opera"
@@ -25,7 +25,7 @@ platform:
     amd64 x86"
 
 DEPENDENCIES="
-    x11-libs/qt:3
+    x11-libs/qt:4
 "
 
 WORK="${WORKBASE}"
