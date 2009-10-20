@@ -1,0 +1,34 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require gnu [ suffix=gz ]
+
+SUMMARY="The GNU Accounting Utilities"
+DESCRIPTION="
+The GNU Accounting Utilities provide login and process accounting utilities for GNU/Linux and other
+systems.
+"
+
+LICENCES="GPL-3"
+SLOT="0"
+PLATFORMS="~amd64"
+
+BUGS_TO="pioto@exherbo.org"
+
+UPSTREAM_DOCUMENTATION="
+http://www.gnu.org/software/${PN}/manual/html_chapter/accounting.html   [[ lang = en description = [ ${PN} manual, HTML ] ]]
+http://www.gnu.org/software/${PN}/manual/pdf/accounting.pdf    [[ lang = en description = [ ${PN} manual, PDF  ] ]]
+"
+
+src_install() {
+    default
+
+    # conflicts with sys-apps/sysvinit
+    rm "${IMAGE}"/usr/bin/last || die "rm /usr/bin/last failed"
+    rm "${IMAGE}"/usr/share/man/man1/last.1 || die "rm /usr/share/man/man1/last.1 failed"
+
+    keepdir /var/log/account
+
+    newinitd "${FILES}"/${PN}.initd ${PN}
+}
+
