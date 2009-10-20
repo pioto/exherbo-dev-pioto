@@ -1,0 +1,56 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+# XXX: tweak checksums.exlib to only check sums for things in $ARCHIVES
+require checksums [ sha1=[ ${PNV}_amd64.deb=663a414810e17c3e039540deea4d9888a9d19f19 ] ]
+
+SUMMARY="Desktop client for Hulu"
+DESCRIPTION="
+Hulu Desktop is a lean-back viewing experience for your personal
+computer. It features a sleek new look that's optimized for use with
+standard Windows Media Center remote controls or Apple remote controls,
+allowing you to navigate Hulu's entire library with just six buttons.
+For users without remotes, the application is keyboard and
+mouse-enabled.
+"
+HOMEPAGE="http://www.hulu.com/labs/hulu-desktop-linux"
+DOWNLOADS="
+    listed-only:
+        platform:amd64? ( http://download.hulu.com/huludesktop_amd64.deb -> ${PNV}_amd64.deb )
+"
+#        platform:x86? ( http://download.hulu.com/huludesktop_i386.deb -> ${PNV}_i386.deb )
+
+LICENCES="huludesktop"
+SLOT="0"
+PLATFORMS="-* ~amd64" # ~x86
+MYOPTIONS="platform: amd64" # x86
+
+DEPENDENCIES="
+    run:
+        x11-libs/gtk+:2
+        net-plugins/adobe-flash[>=9.0.124]
+    suggestion:
+        app-misc/lirc
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+WORK="${WORKBASE}"
+
+src_unpack() {
+    local platform
+    option platform:amd64 && platform=amd64
+    #option platform:x86 && platform=i386
+
+    ar x "${FETCHEDDIR}"/${PNV}_${platform}.deb || die "ar x ${PNV}_${platform}.deb failed"
+
+    mkdir data || die "mkdir data failed"
+    tar -C data -xzf data.tar.gz || die "untaring data failed"
+}
+
+src_install() {
+    mv data/usr/share/doc/{${PN},${PNVR}} || die "failed to rename doc dir"
+
+    mv data/* "${IMAGE}" || die "failed to move data to IMAGE"
+}
+
