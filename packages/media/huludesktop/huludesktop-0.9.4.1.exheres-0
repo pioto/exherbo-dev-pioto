@@ -1,8 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-# XXX: tweak checksums.exlib to only check sums for things in $ARCHIVES
-require checksums [ sha1=[ ${PNV}_amd64.deb=663a414810e17c3e039540deea4d9888a9d19f19 ] ]
+require checksums [ sha1=[ ${PNV}_amd64.deb=663a414810e17c3e039540deea4d9888a9d19f19 ${PNV}_i386.deb=cdaaa2e2e493fef083df1237bc686ff028f465d1 ] ]
 
 SUMMARY="Desktop client for Hulu"
 DESCRIPTION="
@@ -17,13 +16,13 @@ HOMEPAGE="http://www.hulu.com/labs/hulu-desktop-linux"
 DOWNLOADS="
     listed-only:
         platform:amd64? ( http://download.hulu.com/huludesktop_amd64.deb -> ${PNV}_amd64.deb )
+        platform:x86? ( http://download.hulu.com/huludesktop_i386.deb -> ${PNV}_i386.deb )
 "
-#        platform:x86? ( http://download.hulu.com/huludesktop_i386.deb -> ${PNV}_i386.deb )
 
 LICENCES="huludesktop"
 SLOT="0"
-PLATFORMS="-* ~amd64" # ~x86
-MYOPTIONS="platform: amd64" # x86
+PLATFORMS="-* ~amd64 ~x86"
+MYOPTIONS="platform: amd64 x86"
 
 DEPENDENCIES="
     run:
@@ -38,19 +37,14 @@ BUGS_TO="pioto@exherbo.org"
 WORK="${WORKBASE}"
 
 src_unpack() {
-    local platform
-    option platform:amd64 && platform=amd64
-    #option platform:x86 && platform=i386
+    default
 
-    ar x "${FETCHEDDIR}"/${PNV}_${platform}.deb || die "ar x ${PNV}_${platform}.deb failed"
-
-    mkdir data || die "mkdir data failed"
-    tar -C data -xzf data.tar.gz || die "untaring data failed"
+    edo mkdir data
+    edo tar -C data -xzf data.tar.gz
 }
 
 src_install() {
-    mv data/usr/share/doc/{${PN},${PNVR}} || die "failed to rename doc dir"
-
-    mv data/* "${IMAGE}" || die "failed to move data to IMAGE"
+    edo mv data/usr/share/doc/{${PN},${PNVR}}
+    edo mv data/* "${IMAGE}"
 }
 
