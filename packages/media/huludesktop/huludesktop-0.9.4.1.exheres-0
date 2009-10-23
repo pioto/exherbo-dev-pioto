@@ -26,10 +26,11 @@ MYOPTIONS="platform: amd64 x86"
 
 DEPENDENCIES="
     run:
-        x11-libs/gtk+:2
+        x11-libs/gtk+:2[>=2.12]
+        dev-libs/glib:2[>=2.16]
         net-plugins/adobe-flash[>=9.0.124]
     suggestion:
-        app-misc/lirc
+        app-misc/lirc[>=0.8.2]
 "
 
 BUGS_TO="pioto@exherbo.org"
