@@ -21,6 +21,7 @@ DEPENDENCIES="
     run:
         dev-lang/perl:*
     suggestion:
+        dev-perl/Date-Manip [[ description = [ Allows fancier --range arguments ] ]]
         mail-client/mailx [[ description = [ Used for the --mail option ] ]]
 "
 
