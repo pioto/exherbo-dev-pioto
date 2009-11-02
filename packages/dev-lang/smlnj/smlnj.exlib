@@ -46,7 +46,7 @@ SMLNJ_TARGETS="./config/targets"
 
 GEN_POSIX_NAMES_PATCH="15i\n#\n.\nj\nw\nq"
 
-ARCH_BOOT="sml.boot.${ARCH}-unix"
+ARCH_BOOT="sml.boot.x86-unix"
 
 WORK="${WORKBASE}"
 
