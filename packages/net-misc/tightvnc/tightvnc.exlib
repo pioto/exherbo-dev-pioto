@@ -10,7 +10,7 @@ would do it sitting in the front of that computer.
 "
 HOMEPAGE="http://www.tightvnc.com/"
 DOWNLOADS="mirror://sourceforge/vnc-tight/${PNV}_unixsrc.tar.bz2"
-MYOPTIONS="server"
+MYOPTIONS="server [[ description = [ Build vncserver, otherwise build only vnc client ] ]]"
 
 LICENCES="GPL-2"
 
