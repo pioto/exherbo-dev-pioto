@@ -1,4 +1,5 @@
 # Copyright 2008 Michael Kelly
+# Copyright 2009 Bo Ørsted Andresen
 # Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="Basic finger and fingerd from the netkit package."
@@ -15,19 +16,17 @@ DEPENDENCIES=""
 DEFAULT_SRC_PREPARE_PATCHES=("${FILES}/${PNV}-include-time-fix.patch")
 
 src_configure() {
-    ./configure --prefix=/usr
+    edo ./configure --prefix=/usr || die "edo failed. old paludis?"
 
-    sed -i "s,CFLAGS=\(.*\),CFLAGS=\1 ${CFLAGS}," MCONFIG \
-        || die "CFLAGS sed failed"
-    sed -i "s,LDFLAGS=\(.*\),LDFLAGS=\1 ${CFLAGS}," MCONFIG \
-        || die "LDFLAGS sed failed"
-    sed -i "s,MANDIR=\(.*\),MANDIR=/usr/share/man," MCONFIG \
-        || die "MANDIR sed failed"
+    edo sed -i -e "s,CFLAGS=\(.*\),CFLAGS=\1 ${CFLAGS}," \
+               -e "s,LDFLAGS=\(.*\),LDFLAGS=\1 ${CFLAGS}," \
+               -e "s,MANDIR=\(.*\),MANDIR=/usr/share/man," \
+               -e "s,INSTALLROOT=\(.*\),INSTALLROOT=${IMAGE}," MCONFIG
+    edo sed -i -e 's/install -s/install/' finger{,d}/Makefile
 }
 
 src_install() {
-    sed -i "s,INSTALLROOT=\(.*\),INSTALLROOT=${IMAGE}," MCONFIG \
-        || die "INSTALLROOT sed failed"
     dodir /usr/bin /usr/sbin /usr/share/man/man{1,8}
-    make install || die "make install failed"
+    default
 }
+
