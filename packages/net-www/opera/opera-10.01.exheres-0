@@ -28,6 +28,8 @@ DEPENDENCIES="
     x11-libs/qt:4
 "
 
+UPSTREAM_CHANGELOG="http://www.opera.com/docs/changelogs/unix/${PV/./}/"
+
 WORK="${WORKBASE}"
 
 src_install() {
