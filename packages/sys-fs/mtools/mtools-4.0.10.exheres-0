@@ -16,7 +16,7 @@ has been released on November 29th, 2009.
 
 LICENCES="GPL-3"
 SLOT="0"
-PLATFORMS="~amd64"
+PLATFORMS="~amd64 ~x86"
 
 # too lazy to figure out the deps now
 DEFAULT_SRC_CONFIGURE_PARAMS=(
