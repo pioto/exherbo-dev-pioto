@@ -1,7 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require multilib
+require multilib toolchain-funcs
 
 MY_PV="${PV/_/}"
 MY_PNV="${PN}-${MY_PV}"
@@ -69,6 +69,7 @@ src_configure() {
         --prefix=/usr
         --libdir=/usr/$(get_libdir)
         --enable-all-engines
+        --disable-debug
         --backend=sdl"
     option alsa || myconf+=" --disable-alsa"
     option flac || myconf+=" --disable-flac"
@@ -77,7 +78,7 @@ src_configure() {
     option mpeg2 && myconf+=" --enable-mpeg2"
     option ogg || myconf+=" --disable-vorbis"
 
-    edo ./configure ${myconf}
+    CXX="$(tc-getCXX)" edo ./configure ${myconf}
 }
 
 src_install() {
