@@ -1,7 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require checksums [ sha1=[ ${PNV}.tar.gz=08e9f302ef6518eb47e470c33b83fdad7f94769e ] ]
+require checksums [ sha1=[ ${PNV}.tar.gz=2f9d70c42f5506b3e8a9c883a1b9ebb27e3e0280 ] ]
 
 SUMMARY="Cross-platform personal finance manager."
 HOMEPAGE="http://moneydance.com"
