@@ -43,7 +43,7 @@ DEPENDENCIES="
         dev-libs/pkcs11-helper
         sys-fs/fuse
         sys-fs/lvm2
-        x11-libs/wxGTK:2.8[unicode(+)][threads]
+        x11-libs/wxGTK:2.8[unicode(+)][threads(+)]
 "
 
 BUGS_TO="pioto@exherbo.org"
