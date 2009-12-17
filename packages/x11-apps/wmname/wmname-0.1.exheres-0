@@ -1,0 +1,39 @@
+# Copyright 2009 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="prints/sets the window manager name property of the root window"
+DESCRIPTION="
+wmname prints/sets the window manager name property of the root window
+similar to how hostname(1) behaves.
+
+wmname is a nice utility to fix problems with JDK versions and other
+broken programs assuming a reparenting window manager for instance.
+"
+HOMEPAGE="http://tools.suckless.org/wmname"
+DOWNLOADS="http://dl.suckless.org/tools/${PNV}.tar.gz"
+
+LICENCES="MIT"
+SLOT="0"
+PLATFORMS="~amd64"
+
+DEPENDENCIES="
+    build:
+        x11-proto/xproto
+    build+run:
+        x11-libs/libX11
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+DEFAULT_SRC_COMPILE_PARAMS=( -j1 )
+
+src_prepare() {
+    edo sed -e 's/@strip/@true/' -i Makefile
+}
+
+src_configure() {
+    edo sed -e "/^PREFIX = /s:/usr/local:/usr:" -i config.mk
+    edo sed -e "/^CFLAGS = /s: = : = ${CFLAGS} :" -i config.mk
+    edo sed -e "/^LDFLAGS = /s: = : = ${LDFLAGS} :" -i config.mk
+}
+
