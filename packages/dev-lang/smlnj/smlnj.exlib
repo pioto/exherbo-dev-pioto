@@ -1,4 +1,4 @@
-# Copyright 2007,2009 Mike Kelly
+# Copyright 2007, 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 # Based on "snlnj-110.45.ebuild" from Gentoo, which is
 #     Copyright 1999-2007 Gentoo Foundation
@@ -8,6 +8,7 @@ DESCRIPTION="
 "
 HOMEPAGE="http://www.smlnj.org"
 DOWNLOADS="
+platform:amd64? ( http://smlnj.cs.uchicago.edu/dist/working/${PV}/boot.x86-unix.tgz -> ${PNV}-boot.x86-unix.tgz )
 platform:x86? ( http://smlnj.cs.uchicago.edu/dist/working/${PV}/boot.x86-unix.tgz -> ${PNV}-boot.x86-unix.tgz )
 http://smlnj.cs.uchicago.edu/dist/working/${PV}/config.tgz -> ${PNV}-config.tgz
 http://smlnj.cs.uchicago.edu/dist/working/${PV}/MLRISC.tgz -> ${PNV}-MLRISC.tgz
@@ -27,15 +28,11 @@ http://smlnj.cs.uchicago.edu/dist/working/${PV}/heap2asm.tgz -> ${PNV}-heap2asm.
 
 LICENCES="BSD-3"
 MYOPTIONS="
-platform: x86"
+platform: amd64 x86"
 
-DEPENDENCIES="
-build:
-    sys-apps/ed"
+DEPENDENCIES=""
 
 BUGS_TO="pioto@exherbo.org"
-
-REMOTE_IDS=""
 
 UPSTREAM_CHANGELOG="http://www.smlnj.org/dist/working/${PV}/NOTES/HISTORY"
 UPSTREAM_DOCUMENTATION="http://smlnj.org/doc/literature.html"
@@ -44,22 +41,14 @@ UPSTREAM_RELEASE_NOTES="http://smlnj.org/dist/working/${PV}/${PV}-README.html"
 SMLNJ_DEST="/usr/lib/smlnj"
 SMLNJ_TARGETS="./config/targets"
 
-GEN_POSIX_NAMES_PATCH="15i\n#\n.\nj\nw\nq"
-
-ARCH_BOOT="sml.boot.x86-unix"
-
 WORK="${WORKBASE}"
 
 src_unpack() {
     default
 
-    dirs=`ls ${WORKBASE}`
-    mkdir ${WORKBASE}/base
+    edo mkdir ${WORKBASE}/base
 
-    mv ${WORKBASE}/runtime ${WORKBASE}/base
-
-    printf ${GEN_POSIX_NAMES_PATCH} | ed -s ${WORKBASE}/src/runtime/config/gen-posix-names.sh \
-        || die 'ed failed'
+    edo mv ${WORKBASE}/runtime ${WORKBASE}/base
 }
 
 src_compile() {
@@ -68,13 +57,13 @@ src_compile() {
     echo "request ml-burg" >> $SMLNJ_TARGETS
     echo "request eXene" >> $SMLNJ_TARGETS
 
-    LC_ALL=C ./config/install.sh || die
+    LC_ALL=C edo ./config/install.sh
 }
 
 src_install() {
     dodir ${SMLNJ_DEST}
 
-    sed -i -e "s/head -1/head -n 1/" bin/.run-sml
+    edo sed -i -e "s/head -1/head -n 1/" bin/.run-sml
 
     exeinto ${SMLNJ_DEST}/bin
     doexe bin/{.run-sml,.link-sml,.arch-n-opsys,ml-makedepend,ml-build}
@@ -89,7 +78,7 @@ src_install() {
         dosym .run-sml ${SMLNJ_DEST}/bin/$i
     done
 
-    cp -Rp ${WORKBASE}/lib ${IMAGE}/${SMLNJ_DEST}
+    edo cp -Rp ${WORKBASE}/lib ${IMAGE}/${SMLNJ_DEST}
 
     hereenvd 10smlnj <<EOF
 SMLNJ_HOME=${SMLNJ_DEST}
@@ -104,3 +93,4 @@ EOF
     dosym ${SMLNJ_DEST}/bin/ml-yacc /usr/bin
     dosym ${SMLNJ_DEST}/bin/sml /usr/bin
 }
+
