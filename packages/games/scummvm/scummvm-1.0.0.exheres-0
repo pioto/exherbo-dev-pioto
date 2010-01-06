@@ -1,7 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require multilib toolchain-funcs
+require multilib
 
 MY_PV="${PV/_/}"
 MY_PNV="${PN}-${MY_PV}"
@@ -78,7 +78,7 @@ src_configure() {
     option mpeg2 && myconf+=" --enable-mpeg2"
     option ogg || myconf+=" --disable-vorbis"
 
-    CXX="$(tc-getCXX)" edo ./configure ${myconf}
+    CXX="${CXX}" edo ./configure ${myconf}
 }
 
 src_install() {

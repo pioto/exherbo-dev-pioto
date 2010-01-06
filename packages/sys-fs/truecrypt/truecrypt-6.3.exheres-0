@@ -3,7 +3,7 @@
 # Based in part upon 'truecrypt-6.2a.ebuild' from Gentoo, which is:
 #     Copyright 1999-2009 Gentoo Foundation
 
-require flag-o-matic toolchain-funcs
+require flag-o-matic
 
 RESTRICT="fetch"
 
@@ -54,10 +54,10 @@ src_compile() {
     append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
     emake \
         VERBOSE=1 \
-        CC="$(tc-getCC)" \
-        CXX="$(tc-getCXX)" \
-        AR="$(tc-getAR)" \
-        RANLIB="$(tc-getRANLIB)" \
+        CC="${CC}" \
+        CXX="${CXX}" \
+        AR="${AR}" \
+        RANLIB="${RANLIB}" \
         NOSTRIP=1 \
         TC_EXTRA_CFLAGS="${CFLAGS}" \
         TC_EXTRA_CXXFLAGS="${CXXFLAGS}" \
