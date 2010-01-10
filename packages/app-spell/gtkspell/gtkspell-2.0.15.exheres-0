@@ -13,14 +13,14 @@ DOWNLOADS="${HOMEPAGE}/download/${PNV}.tar.gz"
 LICENCES="GPL-2"
 SLOT="2"
 PLATFORMS="~amd64 ~x86"
-MYOPTIONS="doc nls"
+MYOPTIONS="doc"
 
 DEPENDENCIES="
 build:
     dev-lang/perl:*
     dev-util/intltool
+    sys-devel/gettext
     doc? ( dev-doc/gtk-doc )
-    nls? ( sys-devel/gettext )
 build+run:
     x11-libs/gtk+:2
     app-spell/enchant
@@ -28,8 +28,8 @@ build+run:
 
 DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
     'doc gtk-doc'
-    'nls'
 )
+DEFAULT_SRC_CONFIGURE_PARAMS=( --enable-nls )
 
 REMOTE_IDS="sourceforge:gtkspell freshmeat:gtkspell"
 
