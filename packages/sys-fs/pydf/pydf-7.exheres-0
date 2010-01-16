@@ -15,8 +15,8 @@ PLATFORMS="~amd64"
 MYOPTIONS=""
 
 DEPENDENCIES="
-run:
-    dev-lang/python:*[>=2.3]
+    run:
+        dev-lang/python:*[>=2.3]
 "
 
 src_install() {

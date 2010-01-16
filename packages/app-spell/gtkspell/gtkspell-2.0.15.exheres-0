@@ -16,14 +16,14 @@ PLATFORMS="~amd64 ~x86"
 MYOPTIONS="doc"
 
 DEPENDENCIES="
-build:
-    dev-lang/perl:*
-    dev-util/intltool
-    sys-devel/gettext
-    doc? ( dev-doc/gtk-doc )
-build+run:
-    x11-libs/gtk+:2
-    app-spell/enchant
+    build:
+        dev-lang/perl:*
+        dev-util/intltool
+        sys-devel/gettext
+        doc? ( dev-doc/gtk-doc )
+    build+run:
+        x11-libs/gtk+:2
+        app-spell/enchant
 "
 
 DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(

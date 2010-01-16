@@ -24,7 +24,7 @@ PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
 DEPENDENCIES="
-build+run:
-    media-libs/SDL
+    build+run:
+        media-libs/SDL
 "
 

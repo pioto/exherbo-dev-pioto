@@ -21,8 +21,8 @@ PLATFORMS="~amd64"
 MYOPTIONS=""
 
 DEPENDENCIES="
-build+run:
-    media-libs/jasper
+    build+run:
+        media-libs/jasper
 "
 
 WORK="${WORKBASE}/${MY_PNV}"

@@ -21,18 +21,18 @@ PLATFORMS="~amd64"
 MYOPTIONS=""
 
 DEPENDENCIES="
-build:
-    x11-proto/xproto
-    x11-proto/xextproto
-build+run:
-    sys-libs/zlib
-    x11-libs/libICE
-    x11-libs/libSM
-    x11-libs/libX11
-    x11-libs/libXext
-    x11-libs/libXtst
+    build:
+        x11-proto/xproto
+        x11-proto/xextproto
+    build+run:
+        sys-libs/zlib
+        x11-libs/libICE
+        x11-libs/libSM
+        x11-libs/libX11
+        x11-libs/libXext
+        x11-libs/libXtst
 
-    !net-misc/tightvnc [[ note = [ conflicting installs of vncviewer, vncpasswd ] ]]
+        !net-misc/tightvnc [[ note = [ conflicting installs of vncviewer, vncpasswd ] ]]
 "
 
 WORK="${WORKBASE}/vnc-${MY_PV}-unixsrc/unix"

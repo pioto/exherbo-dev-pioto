@@ -31,9 +31,9 @@ PLATFORMS="~amd64 ~x86"
 MYOPTIONS="ao vim-syntax"
 
 DEPENDENCIES="
-build+run:
-    media-libs/libmad
-    ao? ( media-libs/libao )
+    build+run:
+        media-libs/libmad
+        ao? ( media-libs/libao )
 "
 
 DEFAULT_SRC_INSTALL_PARAMS=(
