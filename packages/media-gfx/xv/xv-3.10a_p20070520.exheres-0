@@ -8,8 +8,6 @@ MY_PNV="${PN}-${MY_PV}"
 JUMBO_PATCH="${PV#*_p}"
 
 SUMMARY=""
-DESCRIPTION="
-"
 HOMEPAGE="http://www.trilon.com/xv/ http://www.sonic.net/~roelofs/greg_xv.html"
 DOWNLOADS="
     ftp://ftp.cis.upenn.edu/pub/${PN}/${MY_PNV}.tar.gz
