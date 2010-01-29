@@ -31,7 +31,7 @@ Main Features:
 HOMEPAGE="http://www.truecrypt.org/"
 DOWNLOADS="${PNV}.tar.gz"
 
-LICENCES="truecrypt-2.7"
+LICENCES="truecrypt-2.8"
 SLOT="0"
 PLATFORMS="~amd64"
 MYOPTIONS=""
