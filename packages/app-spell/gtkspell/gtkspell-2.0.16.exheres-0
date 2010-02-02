@@ -1,4 +1,4 @@
-# Copyright 2009 Mike Kelly
+# Copyright 2009, 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
 require sourceforge [ suffix=tar.gz ]
@@ -40,10 +40,6 @@ UPSTREAM_DOCUMENTATION="${HOMEPAGE}/doc/"
 
 src_install() {
     default
-
-    if ! option 'doc'; then
-        rmdir "${IMAGE}"/usr/share/gtk-doc/{html{/${PN}/,},} ||
-            die "failed to remove (supposedly) empty gtk-doc dir"
-    fi
+    edo find "${IMAGE}"/usr/share/gtk-doc -depth -type d -empty -delete
 }
 
