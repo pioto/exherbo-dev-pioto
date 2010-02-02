@@ -1,10 +1,9 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require multilib
-
 MY_PV="${PV/_/}"
-MY_PNV="${PN}-${MY_PV}"
+
+require multilib sourceforge
 
 SUMMARY="engine for running various old adventure games"
 DESCRIPTION="
@@ -15,7 +14,6 @@ shipped with the games, allowing you to play them on systems for which
 they were never designed! 
 "
 HOMEPAGE="http://www.scummvm.org/"
-DOWNLOADS="mirror://sourceforge/${PN}/${MY_PNV}.tar.bz2"
 
 LICENCES="GPL-2 LGPL-2.1"
 SLOT="0"
@@ -55,7 +53,7 @@ DEPENDENCIES="
 
 BUGS_TO="pioto@exherbo.org"
 
-WORK="${WORKBASE}/${MY_PNV}"
+WORK="${WORKBASE}/${PN}-${MY_PV}"
 
 src_prepare() {
     edo sed \

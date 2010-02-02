@@ -1,14 +1,14 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
+require sourceforge [ suffix=tar.gz ]
+
 SUMMARY="spelling suggestions for GTK widgets"
 DESCRIPTION="
 GtkSpell provides word-processor-style highlighting and replacement of
 misspelled words in a GtkTextView widget. Right-clicking a misspelled
 word pops up a menu of suggested replacements.
 "
-HOMEPAGE="http://gtkspell.sourceforge.net/"
-DOWNLOADS="${HOMEPAGE}/download/${PNV}.tar.gz"
 
 LICENCES="GPL-2"
 SLOT="2"
@@ -31,7 +31,7 @@ DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
 )
 DEFAULT_SRC_CONFIGURE_PARAMS=( --enable-nls )
 
-REMOTE_IDS="sourceforge:gtkspell freshmeat:gtkspell"
+REMOTE_IDS="freshmeat:gtkspell"
 
 BUGS_TO="pioto@exherbo.org"
 

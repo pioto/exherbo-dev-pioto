@@ -1,14 +1,14 @@
 # Copyright 2008, 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
+require sourceforge [ project=acpiclient suffix=tar.gz ]
+
 SUMMARY="command line client to display basic ACPI info"
 DESCRIPTION="
 Attempts to replicate the functionality of the 'old' apm command on ACPI
 systems, including battery and thermal information. Does not support
 ACPI suspending, only displays information about ACPI devices.
 "
-HOMEPAGE="http://sourceforge.net/projects/acpiclient/"
-DOWNLOADS="mirror://sourceforge/acpiclient/${PNV}.tar.gz"
 
 LICENCES="GPL"
 SLOT="0"
@@ -19,5 +19,5 @@ DEPENDENCIES=""
 
 BUGS_TO="pioto@exherbo.org"
 
-REMOTE_IDS="freshmeat:acpi sourceforge:acpi"
+REMOTE_IDS="freshmeat:acpi"
 
