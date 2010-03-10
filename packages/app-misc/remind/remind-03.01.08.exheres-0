@@ -1,4 +1,4 @@
-# Copyright 2009 Mike Kelly
+# Copyright 2009, 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
 SUMMARY="a sophisticated calendar and alarm program"
@@ -44,6 +44,7 @@ src_install() {
     emagicdocs
 
     dodoc docs/* examples/defs.rem
+    dodoc -r contrib/
 
     if ! option tk ; then
         rm -v "${IMAGE}/usr/bin/tkremind" || die "rm /usr/bin/tkremind failed"
