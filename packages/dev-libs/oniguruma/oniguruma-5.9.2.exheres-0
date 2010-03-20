@@ -1,4 +1,4 @@
-# Copyright 2009 Mike Kelly
+# Copyright 2009, 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
 MY_PN="onig"
@@ -13,7 +13,7 @@ for every regular expression object can be specified.
 HOMEPAGE="http://www.geocities.jp/kosako3/oniguruma/"
 DOWNLOADS="${HOMEPAGE}/archive/${MY_PN}-${PV}.tar.gz"
 
-LICENCES="FIXME"
+LICENCES="BSD-2"
 SLOT="0"
 PLATFORMS="~amd64"
 MYOPTIONS=""
@@ -21,4 +21,6 @@ MYOPTIONS=""
 DEPENDENCIES=""
 
 WORK="${WORKBASE}/${MY_PN}-${PV}"
+
+DEFAULT_SRC_CONFIGURE_PARAMS=( '--hates=docdir' )
 
