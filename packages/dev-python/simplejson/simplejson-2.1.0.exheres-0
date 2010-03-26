@@ -1,0 +1,23 @@
+# Copyright 2010 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require distutils pypi
+
+SUMMARY="Simple, fast, extensible JSON encoder/decoder for Python"
+DESCRIPTION="
+simplejson is a simple, fast, complete, correct and extensible JSON
+<http://json.org>  encoder and decoder for Python 2.4+. It is pure
+Python code with no dependencies, but includes an optional C extension
+for a serious speed boost.
+"
+HOMEPAGE="http://undefined.org/python/#simplejson"
+
+LICENCES="MIT"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+BUGS_TO="pioto@pioto.org"
+
+REMOTE_IDS="pypi:${PN}"
+
