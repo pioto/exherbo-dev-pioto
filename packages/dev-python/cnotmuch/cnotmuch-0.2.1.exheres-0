@@ -1,0 +1,26 @@
+# Copyright 2010 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require distutils pypi
+
+SUMMARY="Python binding of the notmuch mail search and indexing library."
+DESCRIPTION="
+The cnotmuch module provides an interface to the notmuch functionality,
+directly interfacing with a shared notmuch library. Notmuch provides a
+maildatabase that allows for extremely quick searching and filtering of
+your email according to various criteria.
+"
+HOMEPAGE="http://bitbucket.org/spaetz/cnotmuch/"
+
+LICENCES="GPL-3"
+SLOT="0"
+PLATFORMS="~amd64"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    build+run:
+        mail-client/notmuch
+"
+
+BUGS_TO="pioto@pioto.org"
+
