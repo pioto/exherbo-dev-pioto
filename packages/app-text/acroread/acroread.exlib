@@ -1,0 +1,59 @@
+# Copyright 2010 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require alternatives
+
+MY_PVM="$(ever major)"
+MY_LANG="enu"
+
+if ever at_least 9 ; then
+    TAR_NAME="AdbeRdr${PV}-1_i486linux_${MY_LANG}.tar.bz2"
+else
+    TAR_NAME="AdobeReader_${MY_LANG}-${PV}-1.i486.tar.bz2"
+fi
+
+SUMMARY="Adobe's PDF Reader"
+HOMEPAGE="http://www.adobe.com/products/reader/"
+DOWNLOADS="
+    listed-only:
+        http://ardownload.adobe.com/pub/adobe/reader/unix/${MY_PVM}.x/${PV}/${MY_LANG}/${TAR_NAME}
+"
+
+SLOT="${MY_PVM}"
+LICENCES="actoread${SLOT}"
+MYOPTIONS=""
+
+DEPENDENCIES="
+    run:
+        dev-libs/atk[multibuild_c:32(?)]
+        dev-libs/glib[multibuild_c:32(?)]
+        media-libs/fontconfig[multibuild_c:32(?)]
+        sys-libs/zlib[multibuild_c:32(?)]
+        x11-dri/mesa[multibuild_c:32(?)]
+        x11-libs/gtk+[multibuild_c:32(?)]
+        x11-libs/libX11[multibuild_c:32(?)]
+        x11-libs/libXt[multibuild_c:32(?)]
+        x11-libs/pango[multibuild_c:32(?)]
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+RESTRICT="strip"
+
+WORK="${WORKBASE}/AdobeReader"
+
+src_install() {
+    dodir /opt
+    edo pushd "${IMAGE}"/opt
+
+    edo tar xf "${WORK}"/COMMON.TAR
+    edo tar xf "${WORK}"/ILINXR.TAR
+
+    dodoc "${WORK}"/ReadMe.htm
+
+    dodir /usr/bin
+    dosym /opt/Adobe/Reader${SLOT}/bin/acroread /usr/bin/acroread${SLOT}
+
+    alternatives_for ${PN} acroread${SLOT} ${SLOT} /usr/bin/acroread acroread${SLOT}
+}
+
