@@ -39,7 +39,7 @@ WORK="${WORKBASE}/vnc-${MY_PV}-unixsrc/unix"
 
 DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/${PNV}-Add-missing-include-cstdlib-s.patch" )
 
-DEFAULT_SRC_CONFIGURE_PARAMS=( '--with-installed-zlib' )
+DEFAULT_SRC_CONFIGURE_PARAMS=( '--with-installed-zlib' '--hates=docdir' )
 
 UPSTREAM_RELEASE_NOTES="http://realvnc.com/products/free/$(ever range 1-2)/release-notes.html"
 
