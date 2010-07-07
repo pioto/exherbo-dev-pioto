@@ -1,93 +1,60 @@
-Opera Browser Information: LICENSE.TXT
-===========================================
-Copyright (C) Opera Software 1995-2008
+﻿	
+Opera Software End User License Agreement for Opera Desktop Browser for Open Source Operating Systems
 
-IMPORTANT NOTE
+BY ACCEPTING DELIVERY OF THE SOFTWARE AND/OR SERVICES, YOU (HEREINAFTER “CUSTOMER” OR “YOU”) ARE EXPRESSLY AGREEING TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT TO THE EXCLUSION OF ALL OTHER TERMS. IF THESE TERMS ARE CONSIDERED AN OFFER BY OPERA SOFTWARE, ASA (“Opera”), ACCEPTANCE IS EXPRESSLY LIMITED TO THESE TERMS.  OPERA IS WILLING TO MAKE THE SOFTWARE AVAILABLE TO YOU ONLY UPON THE CONDITION THAT YOU ACCEPT THE TERMS OF THIS AGREEMENT. WRITTEN APPROVAL IS NOT A PREREQUISITE TO THE VALIDITY OR ENFORCEABILITY OF THIS AGREEMENT. 
 
-The Software, as defined below, is protected by copyright, which is vested in Opera Software ASA/its suppliers.
+TERMS AND CONDITIONS.  This End User License Agreement (this “Agreement”) is between Customer and Opera.  This Agreement governs Customer’s use of the Software provided to Customer by Opera, including any releases of or to the Software that Customer may receive from Opera, together with the documentation included therewith.
 
-The Software may only be used in accordance with the terms and conditions set out in this document.
+1. DEFINITIONS.  For purposes of this Agreement, the following terms will have the following meanings:  
 
-If you do not read and agree to be bound by the terms and conditions defined in this document, you are not permitted to keep or use the Software in any way whatsoever and must destroy or return all copies of these items which are in your possession.
+1.1 “Customer” or “you” means the legal entity or person who orders or downloads the Software and/or activates the Services. 
 
+1.2 “Documentation” means the standard end-user technical documentation, specifications, materials and other information Opera supplies with the Software and/or Services.  
 
+1.3 "Services" means the various services to which Opera provides users with access, including without limitation, Opera Turbo, the My Opera Community, the Opera Portal Web site, the Dev.Opera Web site, the Opera Widgets Web site, Opera Unite, search services, personalized content and branded programming through its network of properties which may be accessed through any various medium or device now known or hereafter developed. 
 
-END USER LICENSE AGREEMENT
+1.4 “Software” means the proprietary Opera software products (in object code format only) delivered to you hereunder (including but not limited to the Opera Browser and the Opera Widgets Manager), together with any update or upgrade thereto, when and if made available to you by Opera.  Software does not include Third Party Software.
 
-DEFINITIONS
+1.5 “Third Party Software” means the software of certain third parties which Opera may deliver with the Software, including but not limited to widgets of certain third parties and independent developers. 
 
-The following definitions apply to the terms and conditions included in this Agreement.
+1.6 “Use” means to cause a computer system to execute any machine-executable portion of the Software in accordance with the Documentation or to make use of any Documentation or related materials in connection with the execution of any machine-executable portion of the Software.
 
-Opera
-means a Browser, developed by Opera Software ASA, for reading and writing files to and from a network and/or file system.
+2. LICENSE.  Subject to the terms and conditions of this Agreement, Opera hereby grants Customer a limited, non-exclusive, non-transferable, non-sublicensable license: (i) to use the Services and to install and Use the Software supplied to Customer hereunder, as installed on your personal computer, including your laptop, desktop or on computers within Customer’s organization; and (ii) to reproduce and distribute the Software without modification, provided that any such reproduction or distribution of the Software by You: (i) must be in an application repository for a desktop Open Source OS distribution (expressly excluding distribution for embedded Open Source OS); (ii) must be made available free of charge for end-users; and (iii) must be subject to and distributed with a copy of this Agreement. 
 
-Software
-means Opera, all program and information files and other documentation which are part of the Opera Software package.
+3. LICENSE RESTRICTIONS AND THIRD PARTY SOFTWARE.  
 
-Individual
-means a particular person.
+3.1 Customer shall not and shall not allow any third party to: (a) use the Software or Services except as expressly permitted under Section 2; (b) separate the component programs of the Software for use on different computers; (c) adapt, alter, publicly display, publicly perform, translate, embed into any other product or otherwise create derivative works of, or otherwise modify the Software or Services; (d) sublicense, lease, rent, loan, or distribute the Software or Services to any third party; (e) transfer the Software or Services to any third party; (f) reverse engineer, decompile, disassemble or otherwise attempt to derive the source code for the Software, (i) except as permitted by applicable law, or (ii) solely to the extent required to debug changes to any third party LGPL-libraries linked to by the Software; (g) remove, alter or obscure any proprietary notices on the Software or Services, or the applicable documentation therefore; or (h) allow third parties to access or use the Software or Services, including without limitation any use in any application service provider environment, service bureau, or time-sharing arrangements.
 
+3.2 Third Party Software is subject to separate terms and conditions included with, or contained in the setup installation segments of such Third Party Software.  The license restrictions contained in this Agreement do not apply to Third Party Software to the extent they are inconsistent with such Third Party Software terms. Opera shall not be responsible for any Third Party Software.
 
-TERMS OF AGREEMENT
+4. USE OF SERVICES
 
-This is a legal agreement between you, the users, and Opera Software ASA. By installing or using this Software, you agree to be bound by the terms of this agreement. If you do not agree to these terms, you may not use or install the Software.
+4.1 Opera provides users with access to a rich collection of resources and Services, including without limitation various communications tools, forums such as the "My Opera Community" site, and personalized content through its network of properties which may be accessed through any various medium or device now known or hereafter developed.  Certain features of these Services may allow you to post or send content that can be viewed by others ("User Generated Content").  You agree that Opera is not liable for User Generated Content that is provided by others. We have no duty to pre-screen User Generated Content, but we have the right to refuse to post, edit, or deliver submitted User Generated Content. We reserve the right to remove User Generated Content for any reason, but we are not responsible for any failure or delay in removing such material. We reserve the right to block any user's access to any content, Web site or Web page that Opera provides in our sole discretion.
 
-You are entitled to use the Software on all personal computers (laptops/desktops). "Use" means loaded in temporary memory or permanent storage on the computer.
+4.2 Disputes may arise between you and others or between you and Opera related to content, including User Generated Content.  Such disputes could involve, among other things, the use or misuse of domain names; the infringement of copyrights, trademarks or other rights in intellectual property; defamation; fraud; the use or misuse of information; and problems with online auction or commerce transactions. You agree that all claims, disputes or wrongdoing that result from, or are related in any way to, the content of information that you post, transmit, re-transmit or receive through the Services, Opera Software's network or Software are your sole and exclusive responsibility. Opera may at its discretion block certain Web sites or domains and re-route you to other pages. 
 
-You may not use the Software on non-PC products, devices, or embedded in any other product, including, but not limited to, mobile devices, internet appliances, set top boxes (STB), handhelds, PDAs, phones, web pads, tablets, game consoles, TVs, gaming machines, home automation systems, or any other consumer electronics devices or mobile/cable/satellite/television or closed system based service.
+4.3 The use of several of the Services, including Opera Link, requires that you are a registered Opera ID user. You can register for an Opera ID without any charge at http://my.opera.com/. Opera Link allows users to synchronize some data, such as bookmarks, among their Opera Desktop, Opera Mobile and Opera Mini Web browsers. The Terms of Service for the Services is found at http://my.opera.com/community/terms-of-service/, and is incorporated in this Agreement by reference.
 
+4.4 We reserve the right at any time and from time to time to modify or discontinue, temporarily or permanently, the Services (or any part thereof) with or without notice. You agree that we shall not be liable to you or to any third party for any modification, suspension or discontinuance of the Services.
 
-You may not sell, rent, lease or sublicense the Software, without the explicit written consent of Opera Software ASA.
+4.5 Without limiting the applicability of the foregoing general terms, the following terms and conditions apply for the specific services discussed below.
 
-The Software is protected by copyright laws and international treaties. 
+4.5.1	Opera Turbo:  When Opera Turbo is enabled, it will request normal Web content through an Opera Software proxy server.  Opera Turbo will exclude Web pages located on an intranet or using secure connections (HTTPS).  The browsing experience may change due to increased Web page loading speeds when using Opera Turbo. We reserve the right to change, limit usage of, charge for continued usage of (of course require you to opt in before incurring any charges), and/or discontinue the Opera Turbo service at any point in time.  Furthermore, we reserve the right to revise the terms of the Opera Turbo service, which may include making the Opera Turbo service subject to a separate agreement. 
 
-All intellectual property rights such as but not limited to patents, trademarks, copyrights or trade secret rights related to the Software are the property of and remains vested in Opera Software ASA/its suppliers.
+4.5.2	Opera Unite: Opera Unite is a service whereby Opera provides users with a Web browser communication platform through a bundled Web server to share content, collaborate, and interact with others. Certain features of Opera Unite allow you to post and send content and/or links to User Generated Content stored on your computer, which can be viewed and/or accessed by others. The content is not stored by Opera, and Opera exercises no control over User Generated Content passing through its network or equipment or available on or through the Services. You agree that Opera is not liable for any loss of data.  You may only post or send via the Services User Generated Content that you created or that you have permission to send and/or post.  You agree not to use Opera Unite to upload, transfer or otherwise make available files, images, code, materials, or other information or content that is obscene, vulgar, hateful, threatening, or that violates any laws or third-party rights, hereunder but not limited to third-party intellectual property rights. We reserve the right to terminate your account if you use Opera Unite to unlawfully transmit copyrighted material without a license, valid defense or fair use privilege to do so. We do not claim ownership of any User Generated Content.  However, by submitting User Generated Content to us, you grant us the right and limited license to use, copy, display, perform, distribute and adapt this User Generated Content for the purpose of carrying out the Services.
 
-You shall not modify, translate, reverse engineer, decompile or disassemble the Software or any part thereof or otherwise attempt to derive source code, create or use derivative works therefrom.
+5. PROPRIETARY RIGHTS.  Customer acknowledges and agrees that the Services and the Software, including without limitation the Software’s sequence, structure, organization, source code and applicable documentation contains valuable trade secrets and other intellectual property of Opera and its suppliers and is considered Opera’s confidential information.  The Software and Services are licensed and not sold to Customer, and no title or ownership to such Software or Services or the intellectual property rights embodied therein passes as a result of this Agreement or any act pursuant to this Agreement.  The Software and Services and all intellectual property rights therein are the exclusive property of Opera and its suppliers, and all rights in and to the Software and Services not expressly granted to Customer in this Agreement are reserved.  Opera owns all copies of the Software, however made.  Nothing in this Agreement will be deemed to grant, by implication, estoppel or otherwise, a license under any existing or future patents of Opera, except to the extent necessary for Customer to Use the Software or Services as expressly permitted under this Agreement.
 
-You are not allowed to remove, alter or destroy any proprietary, trademark or copyright markings or notices placed upon or contained with the Software.
+6. PRIVACY.  Opera takes the matters of protection and security of its users information very seriously and will treat any and all such information in accordance with the Opera privacy statement, which is located at www.opera.com/privacy, and incorporated into this Agreement by this reference.  
 
+7. TERM AND TERMINATION.  The term of this Agreement will commence upon your download of the Software and/or your commencement of the Services and, unless earlier terminated as provided in this Section 6, will continue in perpetuity.  This Agreement will immediately terminate upon your breach of this Agreement, unless such breach is curable and is actually and immediately cured by you after Opera provides notice of breach to you.  Upon the termination of this Agreement, you will discontinue all use of the Software and/or Services, promptly destroy or have destroyed the Software and any copies thereof, and, upon request by Opera, certify in writing to Opera that such destruction has taken place.  These remedies are cumulative and in addition to any other remedies available to Opera.  Sections 1, 3, 5, 6, 7, 8, 9, 10, 11, and 12 shall survive such termination. 
 
-YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT USE OF THE SOFTWARE IS AT YOUR OWN RISK AND THAT THE SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTIES OR CONDITIONS WHATSOEVER. OPERA SOFTWARE ASA OR ITS SUPPLIERS DO NOT WARRANT THAT THE FUNCTIONS OF THE SOFTWARE WILL MEET YOUR REQUIREMENTS OR THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE. YOU ASSUME RESPONSIBILITY FOR SELECTING THE SOFTWARE TO ACHIEVE YOUR INTENDED RESULTS, AND FOR THE USE AND THE RESULTS OBTAINED FROM THE SOFTWARE.
+8. DISCLAIMER OF WARRANTIES.  THE SOFTWARE AND SERVICES ARE PROVIDED “AS IS,” AND ALL WARRANTIES AND CONDITIONS, EXPRESS, IMPLIED, AND STATUTORY, INCLUDING WITHOUT LIMITATION THE IMPLIED WARRANTIES OF TITLE, NON-INFRINGEMENT, MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE OR USE, ACCURACY OR COMPLETENESS, SATISFACTORY QUALITY, AND QUIET ENJOYMENT, OR OTHER WARRANTIES OR CONDITIONS ARISING BY STATUTE, OPERATION OR LAW, COURSE OF DEALING, USAGE OF TRADE OR OTHERWISE ARE HEREBY DISCLAIMED.  SOME JURISDICTIONS DO NOT ALLOW THE LIMITATION OR EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU.  OPERA DOES NOT WARRANT THAT THE USE OF THE SOFTWARE OR SERVICES WILL BE UNINTERRUPTED OR ERROR-FREE OR THAT THE SOFTWARE OR SERVICES DO NOT CONTAIN ANY VIRUSES.  THIS WARRANTY DISCLAIMER IS A FUNDAMENTAL ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN YOU AND OPERA.  OPERA WOULD NOT PROVIDE THE SOFTWARE OR SERVICES ABSENT SUCH DISCLAIMER. NO REPRESENTATIONS OR WARRANTIES ARE MADE BY ANY SUPPLIERS TO OPERA UNDER OR BY VIRTUE OF THIS AGREEMENT.  
 
-YOU ACKNOWLEDGE THAT THE SOFTWARE IS NOT INTENDED FOR USE IN (I) ON-LINE CONTROL OF AIRCRAFT, AIR TRAFFIC, AIRCRAFT NAVIGATION OR AIRCRAFT COMMUNICATIONS; OR (II) IN THE DESIGN, CONSTRUCTION, OPERATION OR MAINTENANCE OF ANY NUCLEAR FACILITY.
+9. LIMITATION OF LIABILITY.  IN NO EVENT SHALL OPERA BE LIABLE FOR ANY INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR INDIRECT DAMAGES OF ANY KIND (INCLUDING WITHOUT LIMITATION DAMAGES FOR INTERRUPTION OF BUSINESS, LOST DATA, LOST PROFITS, OR THE LIKE) REGARDLESS OF THE FORM OF ACTION, WHETHER IN CONTRACT, TORT (INCLUDING WITHOUT LIMITATION NEGLIGENCE), STRICT PRODUCT LIABILITY, OR OTHER THEORY, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.  IN NO EVENT WILL THE CUMULATIVE LIABILITY OF OPERA ARISING OUT OF OR RELATED TO THIS AGREEMENT EXCEED THE AMOUNT PAID TO OPERA IN RESPECT OF THE SOFTWARE GIVING RISE TO THE CLAIM OR IF NO FEES WERE PAID THEN FIVE HUNDRED EUROS.  SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES SO THE FOREGOING EXCLUSION AND LIMITATION MAY NOT APPLY TO YOU.  THIS LIMITATION OF LIABILITY WILL APPLY NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY SET FORTH HEREIN.  IN NO EVENT WILL ANY SUPPLIER TO OPERA HAVE ANY LIABILITY TO YOU UNDER THIS AGREEMENT.  THIS LIMITATION OF LIABILITY IS A FUNDAMENTAL ELEMENT OF THE BASIS OF THE BARGAIN BETWEEN YOU AND OPERA.  OPERA WOULD NOT PROVIDE THE SOFTWARE TO YOU ABSENT SUCH LIMITATION. 
 
-OPERA SOFTWARE ASA AND ITS SUPPLIERS DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES RELATED TO: NON-INFRINGEMENT, LACK OF VIRUSES, ACCURACY OR COMPLETENESS OF RESPONSES OR RESULTS, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+10. NOTICES.  All notices required under this Agreement will be given as follows: (a) in the case of notices to Opera, by certified mail, return receipt requested, to the following address: Chief Operating Officer, Opera Software ASA, Waldemar Thranes gate 98, 0175 Oslo, Norway, such notice to be deemed effective upon receipt by Opera; and (b) in the case of notices to you, by e-mail to the e-mail address that you provided to Opera prior to initiating the download of the Software or start of the Services, such notice to be deemed effective upon the earlier of (i) twenty-four (24) hours after sending, or (ii) your actual receipt of any such e-mail.
 
-IN NO EVENT SHALL OPERA SOFTWARE ASA OR ITS SUPPLIERS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES OR FOR ANY DAMAGES WHATSOEVER (INCLUDING BUT NOT LIMITED TO DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION, LOSS OF BUSINESS INFORMATION, PERSONAL INJURY, LOSS OF PRIVACY OR OTHER PECUNIARY OR OTHER LOSS WHATSOEVER) ARISING OUT OF USE OR INABILITY TO USE THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+11. INJUNCTIVE RELIEF.  You acknowledge and agree that the Software and Services contain valuable trade secrets, confidential information and proprietary information of Opera.  You further acknowledge that any actual or threatened breach or violation of Section 2 or Section 3 of this Agreement will constitute immediate, irreparable harm to Opera for which monetary damages would be an inadequate remedy, and that injunctive relief is an appropriate remedy for any such breach or violation. 
 
-REGARDLESS OF THE FORM OF ACTION, OPERA SOFTWARE ASA AND ITS SUPPLIERS AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT SHALL NOT EXCEED THE TOTAL AMOUNT PAYABLE BY YOU UNDER THIS AGREEMENT.  THE FOREGOING LIMITATIONS, EXCLUSIONS AND DISCLAIMERS SHALL APPLY TO THE MAXIMUM EXTENT ALLOWED BY APPLICABLE LAW.
-
-The Software may be subject to export or import regulations, and the user agrees to comply strictly with all such laws and regulations. The user agrees not to export or re-export the Software or any part thereof or information pertaining thereto to any country for which a U.S. government agency requires an export license or other governmental approval without first obtaining such license or approval.
-
-Notice to U.S. Government Users: The Software and any associated documentation are "Commercial Items," as that term is defined at 48 C.F.R. 2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation," as such terms are used in 48 C.F.R. 12.212 or 48 C.F.R. 227.7202, as applicable. Consistent with 48 C.F.R. 12.212 or 48 C.F.R. 227.7202-1 through 227.7202-4, as applicable, the Commercial Computer Software and Commercial Computer Software Documentation are licensed to U.S. Government end users (a) only as Commercial Items and (b) with only those rights as are granted to all other end users pursuant to the terms and conditions herein.
-
-Privacy statement: Opera Software ASA strives to protect the security and privacy of the users of its products, and will strictly protect the security of the users' personal information, within the confines of the Opera domain. The Opera Software ASA privacy statement found at <http://www.opera.com/privacy/>, is incorporated in this Agreement by reference.
-
-Any variation to the terms of this Agreement shall only be valid if made in writing by Opera Software ASA.
-
-Any and all disputes arising out of the rights and obligations in this Agreement shall be submitted to ordinary court proceedings. You accept the Oslo City Court as legal venue under this Agreement.
-This Agreement shall be governed by Norwegian law.
-
-   ---   ---   ---   ---   ---
-
-Postal enquiries:
-
-Opera Software ASA
-Postboks 2648 St. Hanshaugen
-NO-0131  OSLO
-NORWAY
-
-
-Office Hours: 9:00am - 4:00pm (+1 GMT) Monday - Friday
-Phone:	+47 24 16 40 00
-Fax:	+47 24 16 40 01
-
-Please visit our Web site before you send us e-mail. We provide many services to our users that will help us respond to you faster than if we receive e-mail.
-
-Web site:
-<http://www.opera.com/>
-
-Contact us:
-<http://www.opera.com/contact/>
-
+12. GENERAL.  When accessing or using the Software and Services, you will be responsible for all of your access and data charges from your Internet service provider or mobile operator. Applications you download or that are made available to you may automatically connect to the Internet to update information or provide a service to you. You acknowledge and agree that the Software may contain cryptographic functionality the export of which is restricted under applicable export control law.  You will comply with all applicable laws and regulations in your activities under this Agreement.  You will not export or re-export the Software in violation of such laws or regulations, or without all required licenses and authorizations. This Agreement will be governed by the laws of Norway without giving effect to any conflicts of law principles that may require the application of the laws of a different country.  The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.  All actions or proceedings arising under or related to this Agreement must be brought in the Oslo City Court, and each party hereby agrees to irrevocably submit to the jurisdiction and venue of any such court in all such actions or proceedings.  If any provision of this Agreement is determined by a court of competent jurisdiction to be invalid, illegal, or unenforceable, the remaining provisions of this Agreement shall not be affected or impaired thereby.  You may not assign or transfer this Agreement without obtaining Opera’s prior written consent, and any purported assignment or transfer in violation of this Section 11 will be null and void. Opera may update the terms of this Agreement if and when you install and update or upgrade to the Software and/or Service.  
