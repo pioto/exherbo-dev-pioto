@@ -1,7 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require checksums [ sha1=[ ${PNV}_amd64.deb=e2a10618ea368facd4973942d5a30e9bd74d7e36 ${PNV}_i386.deb=81ef1ec11100b71c68cec787e4cbf9652c8b57cc ] ]
+require checksums [ sha1=[ ${PNV}_amd64.deb=e12f0aeab8d419b9372d6ae71c7c309737c66217 ${PNV}_i386.deb=d3c5332697a1e388d1f4d23095644d9547d79360 ] ]
 
 SUMMARY="Desktop client for Hulu"
 DESCRIPTION="
