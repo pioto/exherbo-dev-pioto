@@ -15,7 +15,14 @@ SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
-DEPENDENCIES=""
+DEPENDENCIES="
+    run:
+        sys-apps/pciutils
+    suggestion:
+        net-wireless/bluez [[ note = [ note = [ for disabling inactive bluetooth connections ] ]]
+        x11-apps/xrandr [[ note = [ for disabling TV output ] ]]
+        net-wireless/wireless_tools [[ note = [ for enabling power-saving wireless settings ] ]]
+"
 
 BUGS_TO="pioto@exherbo.org"
 
