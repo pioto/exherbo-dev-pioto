@@ -19,7 +19,7 @@ DEPENDENCIES="
     run:
         sys-apps/pciutils
     suggestion:
-        net-wireless/bluez [[ note = [ note = [ for disabling inactive bluetooth connections ] ]]
+        net-wireless/bluez [[ note = [ for disabling inactive bluetooth connections ] ]]
         x11-apps/xrandr [[ note = [ for disabling TV output ] ]]
         net-wireless/wireless_tools [[ note = [ for enabling power-saving wireless settings ] ]]
 "
