@@ -3,5 +3,5 @@
 
 require acroread
 
-PLATFORMS="~amd64"
+PLATFORMS="-* ~x86"
 
