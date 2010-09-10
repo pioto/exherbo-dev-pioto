@@ -1,0 +1,57 @@
+# Copyright 2009, 2010 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+SUMMARY="a sophisticated calendar and alarm program"
+DESCRIPTION="
+Remind is a sophisticated calendar and alarm program. It includes the
+following features:
+
+    * A sophisticated scripting language and intelligent handling of
+      exceptions and holidays.
+    * Plain-text, PostScript and HTML output.
+    * Timed reminders and pop-up alarms.
+    * A friendly graphical front-end for people who don't want to learn
+      the scripting language.
+    * Facilities for both the Gregorian and Hebrew calendars.
+    * Support for 12 different languages.
+"
+HOMEPAGE="http://www.roaringpenguin.com/products/remind"
+DOWNLOADS="http://www.roaringpenguin.com/files/download/${PNV}.tar.gz"
+
+LICENCES="GPL-2"
+SLOT="0"
+MYOPTIONS="
+tk [[ description = [ Install the tkremind frontend ] ]]
+vim-syntax
+"
+
+DEPENDENCIES="
+    run:
+        tk? (
+            dev-lang/tk
+            dev-tcl/tcllib
+        )
+    suggestion:
+        vim-syntax? ( app-vim/remind )
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+REMOTE_IDS="freshmeat:${PN}"
+
+src_install() {
+    emake -j1 -C src DESTDIR="${IMAGE}" install-nostripped
+
+    emagicdocs
+
+    dodoc docs/* examples/defs.rem
+    dodoc -r contrib/
+
+    if ! option tk ; then
+        rm -v "${IMAGE}/usr/bin/tkremind" || die "rm /usr/bin/tkremind failed"
+        rm -v "${IMAGE}/usr/share/man/man1/tkremind.1" || die "rm /usr/share/man/man1/tkremind.1 failed"
+    fi
+
+    mv -v "${IMAGE}"/{usr/bin,usr/share/doc/${PNVR}}/cm2rem.tcl || die "mv cm2rem.tcl failed"
+}
+
