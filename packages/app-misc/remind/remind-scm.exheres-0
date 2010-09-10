@@ -1,0 +1,12 @@
+# Copyright 2009, 2010 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require remind
+
+SCM_REPOSITORY="http://git.roaringpenguin.com/Remind.git"
+require scm-git
+
+DOWNLOADS=""
+
+PLATFORMS="~amd64 ~x86"
+
