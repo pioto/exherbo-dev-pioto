@@ -3,5 +3,10 @@
 
 require remind
 
+SCM_REPOSITORY="http://git.roaringpenguin.com/Remind.git"
+require scm-git
+
+DOWNLOADS=""
+
 PLATFORMS="~amd64 ~x86"
 
