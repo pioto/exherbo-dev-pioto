@@ -28,7 +28,7 @@ DEPENDENCIES="
     run:
         x11-libs/gtk+:2[>=2.12]
         dev-libs/glib:2[>=2.16]
-        net-plugins/adobe-flash[>=9.0.124]
+        net-plugins/adobe-flash[>=10.2.161.22_p1]
     suggestion:
         app-misc/lirc[>=0.8.2]
 "
