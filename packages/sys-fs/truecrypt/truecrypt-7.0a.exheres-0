@@ -33,11 +33,12 @@ DOWNLOADS="${PNV}.tar.gz"
 
 LICENCES="truecrypt-2.8"
 SLOT="0"
-PLATFORMS="~amd64"
+PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
 DEPENDENCIES="
     build:
+        dev-lang/nasm
         dev-util/pkg-config
     build+run:
         dev-libs/pkcs11-helper
