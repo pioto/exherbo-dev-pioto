@@ -1,4 +1,4 @@
-# Copyright 2009 Mike Kelly
+# Copyright 2009, 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 # Based in part upon 'truecrypt-6.2a.ebuild' from Gentoo, which is:
 #     Copyright 1999-2009 Gentoo Foundation
@@ -31,7 +31,7 @@ Main Features:
 HOMEPAGE="http://www.truecrypt.org/"
 DOWNLOADS="${PNV}.tar.gz"
 
-LICENCES="truecrypt-2.8"
+LICENCES="truecrypt-3.0"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
