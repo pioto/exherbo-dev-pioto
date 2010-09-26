@@ -1,0 +1,20 @@
+# Copyright 2010 Mike Kelly
+# Distributed under the terms of the GNU General Public License v2
+
+require sourceforge [[ project="wake-on-lan" suffix="tar.gz" ]]
+
+SUMMARY="implements Wake On LAN functionality in a small program"
+
+LICENCES="GPL-2"
+SLOT="0"
+PLATFORMS="~amd64"
+
+DEPENDENCIES="
+    build:
+        dev-lang/perl:* [[ note = [ for building man pages ] ]]
+"
+
+BUGS_TO="pioto@exherbo.org"
+
+DEFAULT_SRC_CONFIGURE_PARAMS=( --hates=docdir )
+
