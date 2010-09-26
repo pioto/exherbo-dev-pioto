@@ -5,7 +5,7 @@
 
 require multilib
 
-OPERA_REV="6430"
+OPERA_REV="6438"
 MY_PV="${PV}-${OPERA_REV}"
 MY_PNV="${PN}-${MY_PV}"
 
