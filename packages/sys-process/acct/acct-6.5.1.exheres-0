@@ -12,6 +12,7 @@ systems.
 LICENCES="GPL-3"
 SLOT="0"
 PLATFORMS="~amd64"
+MYOPTIONS="baselayout"
 
 BUGS_TO="pioto@exherbo.org"
 
@@ -29,6 +30,6 @@ src_install() {
 
     keepdir /var/log/account
 
-    newinitd "${FILES}"/${PN}.initd ${PN}
+    option baselayout && newinitd "${FILES}"/${PN}.initd ${PN}
 }
 
