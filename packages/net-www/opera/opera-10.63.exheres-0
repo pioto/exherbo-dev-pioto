@@ -27,7 +27,15 @@ platform:
     amd64 x86"
 
 DEPENDENCIES="
-    x11-libs/qt:4
+    run:
+        media-libs/fontconfig
+        x11-libs/libSM
+        x11-libs/libXext
+        x11-libs/libXft
+    suggestion:
+        kde/kdelibs:4 [[ description = [ Allow Opera to use use the KDE Qt widget style ] ]]
+        media-libs/gstreamer [[ description = [ Allow Opera to use the HTML5 video and audio tags ] ]]
+        x11-libs/gtk+:2 [[ description = [ Allow Opera to use the system GTK+ widget style ] ]]
 "
 
 UPSTREAM_CHANGELOG="http://www.opera.com/docs/changelogs/unix/${PV/./}/"
