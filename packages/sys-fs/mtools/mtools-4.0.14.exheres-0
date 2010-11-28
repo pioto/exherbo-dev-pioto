@@ -3,7 +3,7 @@
 
 require gnu
 
-SUMMARY="utilities to access MS-DOS disks from Unix without mounting them"
+SUMMARY="Utilities to access MS-DOS disks from Unix without mounting them"
 DESCRIPTION="
 Mtools is a collection of utilities to access MS-DOS disks from Unix
 without mounting them. It supports Win'95 style long file names, OS/2
@@ -17,6 +17,7 @@ PLATFORMS="~amd64 ~x86"
 
 # too lazy to figure out the deps now
 DEFAULT_SRC_CONFIGURE_PARAMS=(
+    --hates=docdir
     --without-x
 )
 
