@@ -7,7 +7,7 @@ SUMMARY="A top like UI used to show of behalf of which process is the I/O going 
 HOMEPAGE="http://guichaz.free.fr/iotop/"
 DOWNLOADS="http://guichaz.free.fr/${PN}/files/${PNV}.tar.bz2"
 
-LICENCES="!! ( GPL-3 GPL-2 )"
+LICENCES="|| ( GPL-3 GPL-2 )"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
