@@ -1,8 +1,6 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require multilib
-
 MY_PV="${PV%_p*}"
 MY_PNV="${PN}-${MY_PV}"
 JUMBO_PATCH="${PV#*_p}"
@@ -31,7 +29,7 @@ src_prepare() {
         -e "s,^PREFIX = .*,PREFIX = /usr," \
         -i Makefile || die "prefix sed failed"
     sed \
-        -e "s,^JP2KDIR = .*,JP2KDIR = /usr/$(get_libdir)," \
+        -e "s,^JP2KDIR = .*,JP2KDIR = /usr/${LIBDIR}," \
         -e "s,^JP2KINC = .*,JP2KINC = -I/usr/include," \
         -i Makefile || die "jasper sed failed"
 }
