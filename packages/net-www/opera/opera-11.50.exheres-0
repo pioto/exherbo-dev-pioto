@@ -59,5 +59,10 @@ EOF
     edo mv "${IMAGE}"/usr/share/doc/{${PN},${PNVR}}
 
     edo mv lib "${IMAGE}/usr/${LIBDIR}"
+
+    insinto /etc/revdep-rebuild
+    hereins ${PN} <<EOF
+SEARCH_DIRS_MASK=/usr/${LIBDIR}/opera/
+EOF
 }
 
