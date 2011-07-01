@@ -10,7 +10,7 @@ systems, including battery and thermal information. Does not support
 ACPI suspending, only displays information about ACPI devices.
 "
 
-LICENCES="GPL"
+LICENCES="GPL-2"
 SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
