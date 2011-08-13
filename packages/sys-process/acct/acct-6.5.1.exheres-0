@@ -25,8 +25,7 @@ src_install() {
     default
 
     # conflicts with sys-apps/sysvinit
-    rm "${IMAGE}"/usr/bin/last || die "rm /usr/bin/last failed"
-    rm "${IMAGE}"/usr/share/man/man1/last.1 || die "rm /usr/share/man/man1/last.1 failed"
+    edo rm "${IMAGE}"/usr/{bin/last,share/man/man1/last.1}
 
     keepdir /var/log/account
 

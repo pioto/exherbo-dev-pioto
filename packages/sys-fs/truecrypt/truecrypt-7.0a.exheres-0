@@ -61,7 +61,7 @@ src_compile() {
 }
 
 src_test() {
-    "${WORK}"/Main/truecrypt --text --test || die "tests failed"
+    edo "${WORK}"/Main/truecrypt --text --test
 }
 
 src_install() {
