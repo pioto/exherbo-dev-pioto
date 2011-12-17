@@ -13,19 +13,12 @@ Free open-source disk encryption software for Windows Vista/XP, Mac OS X, and Li
 Main Features:
 
     * Creates a virtual encrypted disk within a file and mounts it as a real disk.
-
     * Encrypts an entire partition or storage device such as USB flash drive or hard drive.
-
     * Encrypts a partition or drive where Windows is installed (pre-boot authentication).
-
     * Encryption is automatic, real-time (on-the-fly) and transparent.
-
     * Parallelization and pipelining allow data to be read and written as fast as if the drive was not encrypted.
-
     * Provides plausible deniability, in case an adversary forces you to reveal the password:
-
       Hidden volume (steganography) and hidden operating system.
-
     * Encryption algorithms: AES-256, Serpent, and Twofish. Mode of operation: XTS.
 "
 HOMEPAGE="http://www.truecrypt.org/"
@@ -68,7 +61,7 @@ src_compile() {
 }
 
 src_test() {
-    "${WORK}"/Main/truecrypt --text --test || die "tests failed"
+    edo "${WORK}"/Main/truecrypt --text --test
 }
 
 src_install() {

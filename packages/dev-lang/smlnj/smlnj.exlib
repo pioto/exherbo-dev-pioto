@@ -46,9 +46,9 @@ WORK="${WORKBASE}"
 src_unpack() {
     default
 
-    edo mkdir ${WORKBASE}/base
+    edo mkdir "${WORKBASE}"/base
 
-    edo mv ${WORKBASE}/runtime ${WORKBASE}/base
+    edo mv "${WORKBASE}"/runtime "${WORKBASE}"/base
 }
 
 src_compile() {
@@ -78,7 +78,7 @@ src_install() {
         dosym .run-sml ${SMLNJ_DEST}/bin/$i
     done
 
-    edo cp -Rp ${WORKBASE}/lib ${IMAGE}/${SMLNJ_DEST}
+    edo cp -Rp "${WORKBASE}"/lib "${IMAGE}"/${SMLNJ_DEST}
 
     hereenvd 10smlnj <<EOF
 SMLNJ_HOME=${SMLNJ_DEST}
