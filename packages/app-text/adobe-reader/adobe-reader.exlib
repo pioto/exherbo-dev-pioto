@@ -25,15 +25,15 @@ MYOPTIONS=""
 
 DEPENDENCIES="
     run:
-        dev-libs/atk
-        dev-libs/glib
-        media-libs/fontconfig
-        sys-libs/zlib
-        x11-dri/mesa
-        x11-libs/gtk+
-        x11-libs/libX11
-        x11-libs/libXt
-        x11-libs/pango
+        dev-libs/atk[multibuild_c:32(?)]
+        dev-libs/glib[multibuild_c:32(?)]
+        media-libs/fontconfig[multibuild_c:32(?)]
+        sys-libs/zlib[multibuild_c:32(?)]
+        x11-dri/mesa[multibuild_c:32(?)]
+        x11-libs/gtk+[multibuild_c:32(?)]
+        x11-libs/libX11[multibuild_c:32(?)]
+        x11-libs/libXt[multibuild_c:32(?)]
+        x11-libs/pango[multibuild_c:32(?)]
 "
 
 BUGS_TO="pioto@exherbo.org"
