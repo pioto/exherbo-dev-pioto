@@ -11,17 +11,15 @@ nspluginwrapper is to confine plugins into a specific execution domain,
 for reliability or security purposes (with SELinux or RSBAC). i.e. a
 sandbox in Google Chrome terminology.
 "
-HOMEPAGE="http://gwenole.beauchesne.info/projects/nspluginwrapper"
-DOWNLOADS="http://gwenole.beauchesne.info/projects/nspluginwrapper/files/${PNV}.tar.bz2"
+HOMEPAGE="http://nspluginwrapper.org"
+DOWNLOADS="http://nspluginwrapper.org/download/${PNV}.tar.gz"
 
 LICENCES="GPL-2"
 MYOPTIONS=""
 
 BUGS_TO="pioto@exherbo.org"
 
-REMOTE_IDS="freshmeat:nspluginwrapper"
-
-UPSTREAM_CHANGELOG="http://svn.beauchesne.info/gwenole/projects/nspluginwrapper/tags/release-1.0.0/ChangeLog?revision=HEAD"
-UPSTREAM_DOCUMENTATION="http://gwenole.beauchesne.info/en/projects/nspluginwrapper/help"
-UPSTREAM_RELEASE_NOTES="http://gwenole.beauchesne.info/en/projects/nspluginwrapper/news"
+src_configure () {
+    edo ./configure
+}
 
