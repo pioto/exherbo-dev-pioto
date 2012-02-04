@@ -20,6 +20,6 @@ MYOPTIONS=""
 BUGS_TO="pioto@exherbo.org"
 
 src_configure () {
-    edo ./configure
+    edo ./configure --pkglibdir=/usr/${LIBDIR}/${PN}
 }
 
