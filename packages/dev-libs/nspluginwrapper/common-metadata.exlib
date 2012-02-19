@@ -15,6 +15,12 @@ HOMEPAGE="http://nspluginwrapper.org"
 DOWNLOADS="http://nspluginwrapper.org/download/${PNV}.tar.gz"
 
 LICENCES="GPL-2"
+
+DEPENDENCIES="
+    build+run:
+        x11-libs/gtk+:2
+"
+
 MYOPTIONS=""
 
 BUGS_TO="pioto@exherbo.org"
