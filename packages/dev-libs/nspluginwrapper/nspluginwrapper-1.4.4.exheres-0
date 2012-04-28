@@ -9,3 +9,5 @@ MYOPTIONS=""
 
 DEPENDENCIES=""
 
+DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}"/${PNV}-newglib.patch )
+

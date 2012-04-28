@@ -1,0 +1,63 @@
+Source:https://github.com/davidben/nspluginwrapper/commits/
+Upstream: yes
+Reason: fix build with new glib
+
+From de08bfb186b732f32aec796d0fa6e8f901e66ca6 Mon Sep 17 00:00:00 2001
+From: David Benjamin <davidben@mit.edu>
+Date: Thu, 29 Dec 2011 08:31:42 -0500
+Subject: [PATCH 1/2] Don't include gthread.h directly
+
+Only glib.h (and glib/gstdio.h) are supposed to be included directly.
+Fixes bug #43.
+
+Reported-by: Anssi Hannula <anssi.hannula@iki.fi>
+---
+ src/npw-player.c |    1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/src/npw-player.c b/src/npw-player.c
+index a99b8f7..217b5ba 100644
+--- a/src/npw-player.c
++++ b/src/npw-player.c
+@@ -25,7 +25,6 @@
+ #include <unistd.h>
+ #include <glib.h>
+ #include <glib/gstdio.h>
+-#include <glib/gthread.h>
+ #include <gtk/gtk.h>
+ #include <gdk/gdkx.h>
+ #include <gdk/gdkkeysyms.h>
+-- 
+1.7.10
+
+
+From 928c32260a2a6eccf81b169ee7e80388aa69ecdd Mon Sep 17 00:00:00 2001
+From: David Benjamin <davidben@mit.edu>
+Date: Thu, 29 Dec 2011 08:40:52 -0500
+Subject: [PATCH 2/2] Link to gthread-2.0
+
+We call g_thread_init and whatnot. Fixes bug #44.
+
+Reported-by: Micah Gersten <micahg@ubuntu.com>
+---
+ configure |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/configure b/configure
+index 5f3dd86..09c400a 100755
+--- a/configure
++++ b/configure
+@@ -499,8 +499,8 @@ fi
+ 
+ # check for Glib 2.0 compile CFLAGS
+ if $pkgconfig --exists glib-2.0; then
+-    GLIB_CFLAGS=`$pkgconfig --cflags glib-2.0`
+-    GLIB_LIBS=`$pkgconfig --libs glib-2.0`
++    GLIB_CFLAGS=`$pkgconfig --cflags glib-2.0 gthread-2.0`
++    GLIB_LIBS=`$pkgconfig --libs glib-2.0 gthread-2.0`
+     GLIB_VERSION=`$pkgconfig --modversion glib-2.0`
+ else
+     echo "GLIB 2.0 environment not found"
+-- 
+1.7.10
+
