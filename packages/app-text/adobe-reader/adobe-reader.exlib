@@ -42,6 +42,10 @@ RESTRICT="strip"
 
 WORK="${WORKBASE}/AdobeReader"
 
+pkg_setup() {
+    exdirectory --allow /opt
+}
+
 src_install() {
     dodir /opt
     edo pushd "${IMAGE}"/opt
