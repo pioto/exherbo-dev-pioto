@@ -31,7 +31,7 @@ DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
 )
 DEFAULT_SRC_CONFIGURE_PARAMS=( --enable-nls )
 
-REMOTE_IDS="freshmeat:gtkspell"
+REMOTE_IDS="freecode:gtkspell"
 
 BUGS_TO="pioto@exherbo.org"
 

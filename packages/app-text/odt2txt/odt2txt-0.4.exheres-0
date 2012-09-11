@@ -21,6 +21,6 @@ MYOPTIONS=""
 
 BUGS_TO="pioto@exherbo.org"
 
-REMOTE_IDS="freshmeat:${PN}"
+REMOTE_IDS="freecode:${PN}"
 
 

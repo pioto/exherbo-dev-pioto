@@ -19,5 +19,5 @@ DEPENDENCIES=""
 
 BUGS_TO="pioto@exherbo.org"
 
-REMOTE_IDS="freshmeat:acpi"
+REMOTE_IDS="freecode:acpi"
 

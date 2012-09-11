@@ -42,7 +42,7 @@ build+run:
 
 BUGS_TO="pioto@exherbo.org"
 
-REMOTE_IDS="freshmeat:tightvnc"
+REMOTE_IDS="freecode:tightvnc"
 
 UPSTREAM_CHANGELOG="http://www.tightvnc.com/whatsnew.html"
 UPSTREAM_DOCUMENTATION="
