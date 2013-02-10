@@ -14,6 +14,6 @@ MYOPTIONS=""
 
 DEPENDENCIES="
     build+run:
-        dev-lang/python:=[>=2.5]
+        dev-lang/python:=[>=2.7]
 "
 
