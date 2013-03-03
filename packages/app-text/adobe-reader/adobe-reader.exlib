@@ -26,7 +26,7 @@ MYOPTIONS=""
 DEPENDENCIES="
     run:
         dev-libs/atk[multibuild_c:32(?)]
-        dev-libs/glib[multibuild_c:32(?)]
+        dev-libs/glib:2[multibuild_c:32(?)]
         media-libs/fontconfig[multibuild_c:32(?)]
         sys-libs/zlib[multibuild_c:32(?)]
         x11-dri/mesa[multibuild_c:32(?)]
