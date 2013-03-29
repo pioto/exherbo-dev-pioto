@@ -32,7 +32,7 @@ MYOPTIONS=""
 DEPENDENCIES="
     build:
         dev-lang/nasm
-        dev-util/pkg-config
+        virtual/pkg-config
     build+run:
         dev-libs/pkcs11-helper
         sys-fs/fuse
