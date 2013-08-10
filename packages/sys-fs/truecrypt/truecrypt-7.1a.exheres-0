@@ -46,6 +46,7 @@ WORK="${WORKBASE}/${PNV}-source"
 
 src_compile() {
     append-flags -DCKR_NEW_PIN_MODE=0x000001B0 -DCKR_NEXT_OTP=0x000001B1
+    append-ldflags -ldl
     emake \
         VERBOSE=1 \
         CC="${CC}" \
