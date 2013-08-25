@@ -1,0 +1,41 @@
+Source: git://github.com/davidben/nspluginwrapper.git
+Upstream: yes
+
+From 6bd99e4da88ffce9c61962d74bd53644438de563 Mon Sep 17 00:00:00 2001
+From: Pavel Roskin <proski@gnu.org>
+Date: Sat, 29 Oct 2011 15:12:46 -0400
+Subject: [PATCH 2/4] Use libdl when linking npplayer
+
+Without it, following error occurs on Fedora 15 when compiling for
+x86_64:
+
+/usr/bin/ld: npplayer-npw-player.o: undefined reference to symbol
+'dlsym@@GLIBC_2.2.5'
+/usr/bin/ld: note: 'dlsym@@GLIBC_2.2.5' is defined in DSO
+/lib64/libdl.so.2 so try adding it to the linker command line
+/lib64/libdl.so.2: could not read symbols: Invalid operation
+collect2: ld returned 1 exit status
+
+Fedora already has a patch that adds -ldl to LDFLAGS
+
+Signed-off-by: Pavel Roskin <proski@gnu.org>
+---
+ Makefile | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Makefile b/Makefile
+index e36a991..2a40671 100644
+--- a/Makefile
++++ b/Makefile
+@@ -142,7 +142,7 @@ npplayer_CFLAGS  += $(GTK_CFLAGS) $(GLIB_CFLAGS) $(MOZILLA_CFLAGS) $(CURL_CFLAGS
+ npplayer_LDFLAGS  = $(LDFLAGS)
+ npplayer_LDFLAGS += $(libpthread_LDFLAGS)
+ npplayer_LIBS     = $(GTK_LIBS) $(GLIB_LIBS) $(CURL_LIBS) $(X_LIBS)
+-npplayer_LIBS    += $(libpthread_LIBS) $(libsocket_LIBS)
++npplayer_LIBS    += $(libdl_LIBS) $(libpthread_LIBS) $(libsocket_LIBS)
+ 
+ libnoxshm_LIBRARY = libnoxshm.so
+ libnoxshm_RAWSRCS = libnoxshm.c
+-- 
+1.8.3.4
+
