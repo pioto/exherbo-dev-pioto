@@ -1,7 +1,7 @@
 # Copyright 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require distutils [ python_dep='[>=2.5]' ] pypi
+require distutils [ python_dep='[>=2.5]' python_sup="2.6 2.7 3.3" ] pypi
 
 SUMMARY="Simple, fast, extensible JSON encoder/decoder for Python"
 DESCRIPTION="
@@ -20,4 +20,8 @@ UPSTREAM_CHANGELOG="https://github.com/simplejson/simplejson/blob/master/CHANGES
 UPSTREAM_DOCUMENTATION="http://simplejson.readthedocs.org/en/latest/"
 
 BUGS_TO="pioto@pioto.org"
+
+test_one_multibuild() {
+    edo ${PYTHON} -B setup.py test
+}
 
