@@ -22,8 +22,9 @@ DEPENDENCIES="
         sys-devel/gettext
         doc? ( dev-doc/gtk-doc )
     build+run:
-        x11-libs/gtk+:2
         app-spell/enchant
+        dev-perl/XML-Parser
+        x11-libs/gtk+:2
 "
 
 DEFAULT_SRC_CONFIGURE_OPTION_ENABLES=(
