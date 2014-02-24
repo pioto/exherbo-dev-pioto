@@ -16,6 +16,10 @@ PLATFORMS="~amd64 ~x86"
 MYOPTIONS="
     doc gobject-introspection
     vapi [[ requires = [ gobject-introspection ] ]]
+    ( linguas: af ak ast be cs da de el eo es eu ff fi fo fr
+               ga gl he hr hu hy id is it ja ky lg lt lv mn ms
+               nb nl nso pl pt pt_BR rm ro ru rw sk sl son sq
+               sr st sv th tr uk vi wa zh_CN zh_HK zh_TW zu )
 "
 
 DEPENDENCIES="
