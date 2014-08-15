@@ -3,6 +3,8 @@
 
 require alternatives
 
+export_exlib_phases pkg_setup src_install
+
 MY_PVM="$(ever major)"
 MY_LANG="enu"
 
@@ -42,11 +44,11 @@ RESTRICT="strip"
 
 WORK="${WORKBASE}/AdobeReader"
 
-pkg_setup() {
+adobe-reader_pkg_setup() {
     exdirectory --allow /opt
 }
 
-src_install() {
+adobe-reader_src_install() {
     dodir /opt
     edo pushd "${IMAGE}"/opt
 

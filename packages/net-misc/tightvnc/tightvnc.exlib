@@ -1,6 +1,8 @@
 # Copyright 2008, 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
+export_exlib_phases src_configure src_compile src_install
+
 SUMMARY="a free version of VNC"
 DESCRIPTION="
 TightVNC is a free remote control software package derived from the
@@ -52,11 +54,11 @@ http://www.tightvnc.com/docs.html [[ description = [ Main Documentation ] ]]
 
 WORK="${WORKBASE}/vnc_unixsrc"
 
-src_configure() {
+tightvnc_src_configure() {
     xmkmf || die "xmkmf failed"
 }
 
-src_compile() {
+tightvnc_src_compile() {
     emake World || die "make World failed"
     if optionq "server" ; then
         cd Xvnc
@@ -65,7 +67,7 @@ src_compile() {
     fi
 }
 
-src_install() {
+tightvnc_src_install() {
     dodir "/usr/bin" "/usr/share/man/man1"
     ./vncinstall "${IMAGE}/usr/bin" "${IMAGE}/usr/share/man" \
         || die "vncinstall failed"

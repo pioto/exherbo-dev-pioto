@@ -3,6 +3,8 @@
 # Based on "snlnj-110.45.ebuild" from Gentoo, which is
 #     Copyright 1999-2007 Gentoo Foundation
 
+export_exlib_phases src_unpack src_compile src_install
+
 SUMMARY="Standard ML of New Jersey compiler and libraries"
 DESCRIPTION="
 "
@@ -43,7 +45,7 @@ SMLNJ_TARGETS="./config/targets"
 
 WORK="${WORKBASE}"
 
-src_unpack() {
+smlnj_src_unpack() {
     default
 
     edo mkdir "${WORKBASE}"/base
@@ -51,7 +53,7 @@ src_unpack() {
     edo mv "${WORKBASE}"/runtime "${WORKBASE}"/base
 }
 
-src_compile() {
+smlnj_src_compile() {
     export SMLNJ_HOME=${WORKBASE}
 
     echo "request ml-burg" >> $SMLNJ_TARGETS
@@ -60,7 +62,7 @@ src_compile() {
     LC_ALL=C edo ./config/install.sh
 }
 
-src_install() {
+smlnj_src_install() {
     dodir ${SMLNJ_DEST}
 
     edo sed -i -e "s/head -1/head -n 1/" bin/.run-sml
