@@ -32,8 +32,10 @@ src_prepare() {
 }
 
 src_configure() {
-    edo sed -e "/^PREFIX = /s:/usr/local:/usr:" -i config.mk
+    edo sed -e "/^PREFIX = /s:/usr/local:/usr/$(exhost --target):" -i config.mk
     edo sed -e "/^CFLAGS = /s: = : = ${CFLAGS} :" -i config.mk
     edo sed -e "/^LDFLAGS = /s: = : = ${LDFLAGS} :" -i config.mk
 }
+
+DEFAULT_SRC_COMPILE_PARAMS=( CC=${CC} )
 
