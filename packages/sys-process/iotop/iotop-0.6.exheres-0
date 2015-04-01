@@ -17,3 +17,9 @@ DEPENDENCIES="
         dev-lang/python:=[>=2.7]
 "
 
+src_install() {
+    distutils_src_install
+
+    edo mv "${IMAGE}"/usr/$(exhost --target)/sbin "${IMAGE}"/usr/$(exhost --target)/bin
+}
+
