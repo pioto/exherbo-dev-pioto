@@ -25,7 +25,7 @@ src_install() {
     default
 
     # conflicts with sys-apps/sysvinit
-    edo rm "${IMAGE}"/usr/{bin/last,share/man/man1/last.1}
+    edo rm "${IMAGE}"usr/{"$(exhost --target)"/bin/last,share/man/man1/last.1}
 
     keepdir /var/log/account
 
