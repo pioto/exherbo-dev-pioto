@@ -1,6 +1,7 @@
 # Copyright 2009, 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
+require autotools [ supported_autoconf=[ 2.5 ] supported_automake=[ 1.13 ] ]
 require sourceforge [ pnv=${PN}3-${PV} suffix=tar.gz ]
 
 SUMMARY="spelling suggestions for GTK widgets"
@@ -50,6 +51,12 @@ UPSTREAM_RELEASE_NOTES="${HOMEPAGE}/ChangeLog"
 UPSTREAM_DOCUMENTATION="${HOMEPAGE}/doc/"
 
 WORK="${WORKBASE}/${PN}3-${PV}"
+
+src_prepare() {
+    edo intltoolize --force --automake
+    autotools_src_prepare
+    default
+}
 
 src_install() {
     default

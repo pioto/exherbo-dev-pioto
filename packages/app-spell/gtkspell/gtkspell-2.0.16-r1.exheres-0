@@ -39,6 +39,11 @@ BUGS_TO="pioto@exherbo.org"
 UPSTREAM_RELEASE_NOTES="${HOMEPAGE}/ChangeLog"
 UPSTREAM_DOCUMENTATION="${HOMEPAGE}/doc/"
 
+src_prepare() {
+    edo intltoolize --force --automake
+    default
+}
+
 src_install() {
     default
     edo find "${IMAGE}"/usr/share/gtk-doc -depth -type d -empty -delete
