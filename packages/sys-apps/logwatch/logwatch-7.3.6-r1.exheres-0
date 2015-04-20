@@ -46,7 +46,7 @@ src_install() {
     dodoc README HOWTO-Customize-LogWatch project/CHANGES
     doman logwatch.8
 
-    dodir /usr/sbin
-    dosym /usr/share/logwatch/scripts/logwatch.pl /usr/sbin/logwatch
+    dodir /usr/$(exhost --target)/bin
+    dosym /usr/share/logwatch/scripts/logwatch.pl /usr/$(exhost --target)/bin/logwatch
 }
 
