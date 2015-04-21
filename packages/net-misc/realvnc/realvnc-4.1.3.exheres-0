@@ -22,8 +22,8 @@ MYOPTIONS=""
 
 DEPENDENCIES="
     build:
-        x11-proto/xproto
         x11-proto/xextproto
+        x11-proto/xproto
     build+run:
         sys-libs/zlib
         x11-libs/libICE
@@ -31,27 +31,38 @@ DEPENDENCIES="
         x11-libs/libX11
         x11-libs/libXext
         x11-libs/libXtst
-
         !net-misc/tightvnc [[ note = [ conflicting installs of vncviewer, vncpasswd ] ]]
 "
 
-WORK="${WORKBASE}/vnc-${MY_PV}-unixsrc/unix"
+WORK=${WORKBASE}/vnc-${MY_PV}-unixsrc/unix
+BINDIR=/usr/$(exhost --target)/bin
+SHAREDIR=/usr/share
 
-DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}/${PNV}-Add-missing-include-cstdlib-s.patch" )
+DEFAULT_SRC_PREPARE_PATCHES=( "${FILES}"/${PNV}-Add-missing-include-cstdlib-s.patch )
 
-DEFAULT_SRC_CONFIGURE_PARAMS=( '--with-installed-zlib' '--hates=docdir' )
+DEFAULT_SRC_CONFIGURE_PARAMS=(
+    --hates=datarootdir
+    --hates=docdir
+    --with-installed-zlib
+)
 
 UPSTREAM_RELEASE_NOTES="http://realvnc.com/products/free/$(ever range 1-2)/release-notes.html"
 
 src_prepare() {
-    cd "${WORKBASE}/vnc-${MY_PV}-unixsrc"
+    pushd "${WORK/\/unix}"
+
+    for file in $(grep -lIr "AR = ar"); do
+        edo sed -i -e "/AR =/s:ar:$(exhost --tool-prefix)&:" "${file}"
+    done
+
     default
+
+    popd
 }
 
 src_install() {
-    dodir "/usr/bin" "/usr/share/man/man1"
-    ./vncinstall "${IMAGE}/usr/bin" \
-        "${IMAGE}/usr/share/man" \
-        || die 'vncinstall failed'
+    dodir "${BINDIR}" "${SHAREDIR}"/man/man1
+
+    edo ./vncinstall "${IMAGE}${BINDIR}" "${IMAGE}${SHAREDIR}"/man
 }
 
