@@ -17,6 +17,7 @@ PLATFORMS="~amd64 ~x86"
 
 # too lazy to figure out the deps now
 DEFAULT_SRC_CONFIGURE_PARAMS=(
+    --hates=datarootdir
     --hates=docdir
     --without-x
 )
