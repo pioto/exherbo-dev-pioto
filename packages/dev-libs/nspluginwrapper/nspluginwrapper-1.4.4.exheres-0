@@ -1,7 +1,7 @@
 # Copyright 2008 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require common-metadata
+require nspluginwrapper
 
 SLOT="0"
 PLATFORMS="~amd64 -x86"
