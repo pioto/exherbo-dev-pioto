@@ -16,5 +16,6 @@ DEPENDENCIES="
 
 BUGS_TO="pioto@exherbo.org"
 
-DEFAULT_SRC_CONFIGURE_PARAMS=( --hates=docdir )
+DEFAULT_SRC_CONFIGURE_PARAMS=( --hates=docdir --hates=datarootdir )
+DEFAULT_SRC_COMPILE_PARAMS=( AR="${AR}" )
 
