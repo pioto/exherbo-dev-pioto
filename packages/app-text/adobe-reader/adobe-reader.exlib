@@ -27,15 +27,15 @@ MYOPTIONS=""
 
 DEPENDENCIES="
     run:
-        dev-libs/atk[multibuild_c:32(-)]
-        dev-libs/glib:2[multibuild_c:32(-)]
-        media-libs/fontconfig[multibuild_c:32(-)]
-        sys-libs/zlib[multibuild_c:32(-)]
-        x11-dri/mesa[multibuild_c:32(-)]
-        x11-libs/gtk+[multibuild_c:32(-)]
-        x11-libs/libX11[multibuild_c:32(-)]
-        x11-libs/libXt[multibuild_c:32(-)]
-        x11-libs/pango[multibuild_c:32(-)]
+        dev-libs/atk
+        dev-libs/glib:2
+        media-libs/fontconfig
+        sys-libs/zlib
+        x11-dri/mesa
+        x11-libs/gtk+:2
+        x11-libs/libX11
+        x11-libs/libXt
+        x11-libs/pango
 "
 
 BUGS_TO="pioto@exherbo.org"
@@ -57,9 +57,9 @@ adobe-reader_src_install() {
 
     dodoc "${WORK}"/ReadMe.htm
 
-    dodir /usr/bin
-    dosym /opt/Adobe/Reader${SLOT}/bin/acroread /usr/bin/acroread${SLOT}
+    dodir /usr/$(exhost --target)/bin
+    dosym /opt/Adobe/Reader${SLOT}/bin/acroread /usr/$(exhost --target)/bin/acroread${SLOT}
 
-    alternatives_for ${PN} acroread${SLOT} ${SLOT} /usr/bin/acroread acroread${SLOT}
+    alternatives_for ${PN} acroread${SLOT} ${SLOT} /usr/$(exhost --target)/bin/acroread acroread${SLOT}
 }
 
