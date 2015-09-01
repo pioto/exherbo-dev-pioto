@@ -7,7 +7,7 @@ SUMMARY="implements Wake On LAN functionality in a small program"
 
 LICENCES="GPL-2"
 SLOT="0"
-PLATFORMS="~amd64"
+PLATFORMS="~amd64 ~armv7"
 
 DEPENDENCIES="
     build:
