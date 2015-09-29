@@ -12,7 +12,7 @@ systems.
 LICENCES="GPL-3"
 SLOT="0"
 PLATFORMS="~amd64"
-MYOPTIONS="baselayout"
+MYOPTIONS=""
 
 BUGS_TO="pioto@exherbo.org"
 
@@ -28,7 +28,5 @@ src_install() {
     edo rm "${IMAGE}"usr/{"$(exhost --target)"/bin/last,share/man/man1/last.1}
 
     keepdir /var/log/account
-
-    option baselayout && newinitd "${FILES}"/${PN}.initd ${PN}
 }
 
