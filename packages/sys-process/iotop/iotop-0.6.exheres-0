@@ -1,7 +1,7 @@
 # Copyright 2008, 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require distutils
+require setup-py [ import=distutils ]
 
 SUMMARY="A top like UI used to show of behalf of which process is the I/O going on"
 HOMEPAGE="http://guichaz.free.fr/iotop/"
@@ -12,13 +12,14 @@ SLOT="0"
 PLATFORMS="~amd64 ~x86"
 MYOPTIONS=""
 
-DEPENDENCIES="
-    build+run:
-        dev-lang/python:=[>=2.7]
-"
+DEPENDENCIES=""
+
+DEFAULT_SRC_PREPARE_PATCHES+=(
+    "${FILES}"/${PNV}-Fix-build-error-with-Python-3-caused-by-itervalues-i.patch
+)
 
 src_install() {
-    distutils_src_install
+    setup-py_src_install
 
     edo mv "${IMAGE}"/usr/$(exhost --target)/sbin "${IMAGE}"/usr/$(exhost --target)/bin
 }
