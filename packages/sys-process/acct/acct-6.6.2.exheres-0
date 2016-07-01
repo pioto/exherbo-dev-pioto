@@ -1,7 +1,7 @@
 # Copyright 2009 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require gnu [ suffix=gz ]
+require gnu [ suffix=tar.gz ]
 
 SUMMARY="The GNU Accounting Utilities"
 DESCRIPTION="

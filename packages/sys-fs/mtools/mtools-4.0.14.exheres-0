@@ -1,7 +1,7 @@
 # Copyright 2009, 2010 Mike Kelly
 # Distributed under the terms of the GNU General Public License v2
 
-require gnu [ suffix=bz2 ]
+require gnu [ suffix=tar.bz2 ]
 
 SUMMARY="Utilities to access MS-DOS disks from Unix without mounting them"
 DESCRIPTION="
